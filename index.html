@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Home of Insights — Market & Competitive Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:        #07001A;
+      --purple:       #783FE4;
+      --purple-hover: #8F58F0;
+      --purple-light: #B08AF8;
+      --purple-100:   #E3DBFF;
+      --purple-glow:  rgba(120,63,228,0.38);
+      --green:        #3DFDA0;
+      --green-light:  #8DFDC8;
+      --white:        #FFFFFF;
+      --neutral:      #9895A8;
+      --neutral-dark: #2E2B3A;
+      --surface:      rgba(255,255,255,0.035);
+      --border:       rgba(255,255,255,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 100px;
+      padding: 13px 28px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      letter-spacing: 0.2px;
+    }
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 4px 24px rgba(120,63,228,0.5), 0 0 48px rgba(120,63,228,0.2); }
+      50%       { box-shadow: 0 4px 32px rgba(120,63,228,0.75), 0 0 64px rgba(120,63,228,0.35); }
+    }
+    .btn-primary {
+      background: var(--purple);
+      color: var(--white);
+      animation: glow-pulse 2.8s ease-in-out infinite;
+    }
+    .btn-primary:hover {
+      background: var(--purple-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(120,63,228,0.75), 0 0 72px rgba(120,63,228,0.4);
+      animation: none;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.22);
+    }
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.48);
+      background: rgba(255,255,255,0.055);
+    }
+    .btn-green {
+      background: var(--green);
+      color: var(--black);
+      font-weight: 700;
+      box-shadow: 0 4px 24px rgba(61,253,160,0.32);
+    }
+    .btn-green:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(61,253,160,0.48);
+    }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s cubic-bezier(.22,.84,.44,1), transform 0.7s cubic-bezier(.22,.84,.44,1);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+
+    /* ═══════════════════════════════════════════
+       NEWSLETTER MOCKUP
+    ═══════════════════════════════════════════ */
+    #newsletter-mockup {
+      padding: 96px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .mockup-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mockup-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--white);
+    }
+    .mockup-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--neutral);
+      max-width: 460px;
+    }
+
+    /* Stacked image cards */
+    .mockup-images {
+      position: relative;
+      height: 420px;
+    }
+    .mockup-card {
+      position: absolute;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+    }
+    .mockup-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .mockup-card-back {
+      width: 78%;
+      height: 340px;
+      top: 40px;
+      left: -4%;
+      background: var(--neutral-dark);
+      border: 1px solid var(--border);
+      transform: rotate(-2deg);
+      z-index: 1;
+      opacity: 0.85;
+    }
+    .mockup-card-front {
+      width: 82%;
+      height: 360px;
+      top: 20px;
+      right: -4%;
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.12);
+      transform: rotate(1.5deg);
+      z-index: 2;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .mockup-card-front:hover {
+      transform: rotate(0deg) translateY(-6px);
+      box-shadow: 0 36px 80px rgba(120,63,228,0.3);
+    }
+    .mockup-divider {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 1px;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 100%);
+    }
+    @media (max-width: 768px) {
+      .mockup-grid { grid-template-columns: 1fr; gap: 48px; }
+      .mockup-images { height: 320px; }
+      .mockup-card-back { height: 260px; }
+      .mockup-card-front { height: 280px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 28px;
+      transition: background 0.3s, backdrop-filter 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(7,0,26,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 88px;
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo:hover { opacity: 0.9; }
+    .nav-logo img {
+      height: 76px;
+      width: auto;
+      display: block;
+      filter: brightness(1.25)
+              drop-shadow(0 0 20px rgba(120,63,228,0.85))
+              drop-shadow(0 0 6px rgba(200,160,255,0.5));
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--neutral);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 76px;
+      position: relative;
+      overflow: hidden;
+      transition: min-height 0.5s ease;
+    }
+
+    #hero.fit-content {
+      min-height: 0;
+      padding-top: calc(76px + 80px);
+      padding-bottom: 80px;
+    }
+
+    /* Video background */
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* Dark overlay so text stays legible over the video */
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 0, 26, 0.62);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Gradient fade at the bottom so hero bleeds into the next section */
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent 0%, var(--black) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Toggle button (replaces React state) */
+    .hero-toggle {
+      position: absolute;
+      top: calc(76px + 12px);
+      right: 16px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(85, 80, 110, 0.4);
+      border: 1px solid rgba(164, 132, 215, 0.5);
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hero-toggle:hover { background: rgba(85, 80, 110, 0.65); }
+    .hero-toggle svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .hero-glow-1 {
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(120,63,228,0.2) 0%, transparent 65%);
+      top: -120px; left: -180px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(61,253,160,0.07) 0%, transparent 65%);
+      bottom: -60px; right: 8%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+      z-index: 2;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0 120px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-visual { display: none; }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(120,63,228,0.14);
+      border: 1px solid rgba(120,63,228,0.32);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--purple-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.75); }
+    }
+
+    .hero-content h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 32px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5);
+    }
+    .hero-content h1 .highlight {
+      color: var(--white);
+      -webkit-text-fill-color: var(--white);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 36px;
+      font-weight: 400;
+      text-shadow: 0 1px 16px rgba(0,0,0,0.65);
+    }
+
+    .hero-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      font-size: 12.5px;
+      color: var(--neutral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+    }
+    .hero-note::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* ─── Intelligence Brief Mockup ─── */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brief-container {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+    }
+    .brief-badge {
+      position: absolute;
+      top: -16px; right: -10px;
+      background: var(--green);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 100px;
+      box-shadow: 0 8px 24px rgba(61,253,160,0.38);
+      animation: badge-float 3.2s ease-in-out infinite;
+      white-space: nowrap;
+      z-index: 3;
+    }
+    @keyframes badge-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+    .brief-window {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    .brief-header {
+      background: rgba(120,63,228,0.12);
+      border-bottom: 1px solid rgba(120,63,228,0.2);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brief-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 10px var(--purple-glow);
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    .brief-header-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+    .brief-header-sub {
+      font-size: 11px;
+      color: var(--purple-light);
+      margin-left: auto;
+      font-weight: 500;
+    }
+    .brief-body { padding: 22px; }
+    .brief-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      transition: border-color 0.2s;
+    }
+    .brief-item:last-of-type { margin-bottom: 18px; }
+    .brief-item:hover { border-color: rgba(120,63,228,0.3); }
+    .brief-emoji {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .brief-item-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+    .brief-item-desc {
+      font-size: 11.5px;
+      color: var(--neutral);
+      line-height: 1.5;
+    }
+    .brief-sources {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .brief-sources-label {
+      font-size: 10.5px;
+      color: var(--neutral);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-right: 2px;
+    }
+    .source-tag {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(120,63,228,0.14);
+      border: 1px solid rgba(120,63,228,0.28);
+      color: var(--purple-light);
+    }
+
+    /* ═══════════════════════════════════════════
+       FEATURES
+    ═══════════════════════════════════════════ */
+    #features {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16.5px;
+      color: var(--neutral);
+      max-width: 560px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .section-header { max-width: 660px; margin-bottom: 64px; }
+
+    /* Shader cards grid */
+    .shader-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px)  { .shader-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1100px) and (min-width: 901px) { .shader-grid { grid-template-columns: 1fr 1fr; } }
+
+    .shader-card {
+      position: relative;
+      height: 320px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    /* Animated gradient background */
+    .sc-glow {
+      position: absolute;
+      inset: 0;
+      background: var(--sc-base);
+    }
+    .sc-glow::before {
+      content: '';
+      position: absolute;
+      width: 160%; height: 160%;
+      top: -30%; left: -30%;
+      background:
+        radial-gradient(ellipse at 25% 35%, var(--sc-c1) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 65%, var(--sc-c2) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 20%, var(--sc-c3) 0%, transparent 45%);
+      animation: sc-float-a var(--sc-speed, 7s) ease-in-out infinite alternate;
+      filter: blur(18px);
+    }
+    .sc-glow::after {
+      content: '';
+      position: absolute;
+      width: 150%; height: 150%;
+      top: -25%; left: -25%;
+      background:
+        radial-gradient(ellipse at 80% 25%, var(--sc-c2) 0%, transparent 45%),
+        radial-gradient(ellipse at 15% 75%, var(--sc-c3) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 80%, var(--sc-c1) 0%, transparent 40%);
+      animation: sc-float-b calc(var(--sc-speed, 7s) * 1.3) ease-in-out infinite alternate;
+      filter: blur(22px);
+    }
+    @keyframes sc-float-a {
+      0%   { transform: translate(0,    0)    rotate(0deg)   scale(1);    }
+      100% { transform: translate(8%,  10%)   rotate(15deg)  scale(1.08); }
+    }
+    @keyframes sc-float-b {
+      0%   { transform: translate(0,    0)    rotate(0deg)   scale(1.05); }
+      100% { transform: translate(-10%,-6%)   rotate(-10deg) scale(0.97); }
+    }
+
+    /* Glass content overlay */
+    .sc-content {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.76);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 24px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
+    }
+    .shader-card:hover .sc-content { background: rgba(0,0,0,0.65); }
+
+    .sc-icon {
+      width: 48px; height: 48px;
+      margin-bottom: 22px;
+      color: #fff;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
+      flex-shrink: 0;
+    }
+    .sc-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .sc-desc {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      flex-grow: 1;
+      font-weight: 400;
+    }
+    .sc-link {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    .shader-card:hover .sc-link { color: #fff; }
+
+    /* Mini shader cards — methodology flow */
+    .sc-mini { height: 128px; }
+    .sc-mini .sc-content {
+      padding: 18px 20px;
+      flex-direction: row;
+      align-items: center;
+      gap: 14px;
+    }
+    .sc-mini .sc-icon { width: 30px; height: 30px; margin-bottom: 0; flex-shrink: 0; }
+    .sc-mini .sc-title { font-size: 13.5px; line-height: 1.35; margin-bottom: 0; }
+    .sc-mini .sc-desc  { display: none; }
+
+    /* Output card (Actionable Intelligence) */
+    .sc-output { height: auto; }
+    .sc-output .sc-content {
+      position: relative;
+      padding: 22px 28px;
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
+      background: rgba(0,0,0,0.7);
+      border-color: rgba(255,255,255,0.22);
+    }
+    .sc-output .sc-icon { width: 36px; height: 36px; margin-bottom: 0; flex-shrink: 0; }
+    .sc-output .sc-title { font-size: 17px; margin-bottom: 4px; }
+    .sc-output-sub { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 500; }
+
+    /* Methodology flow layout */
+    .meth-flow { display: flex; flex-direction: column; }
+    .meth-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    /* ═══════════════════════════════════════════
+       METHODOLOGY SPLIT
+    ═══════════════════════════════════════════ */
+    #methodology {
+      padding: 80px 0;
+      position: relative;
+    }
+    .split-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .split-row { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .split-content ul {
+      margin-top: 24px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .split-content ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--neutral);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    .split-content ul li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .split-content .section-sub { font-size: 15px; }
+    .split-content .btn { margin-top: 32px; }
+
+    /* Sources flow visual */
+    .sources-flow {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sources-flow::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(120,63,228,0.15) 0%, transparent 70%);
+      top: -80px; right: -80px;
+    }
+    .sources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 2;
+    }
+    .source-node {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      transition: border-color 0.2s;
+    }
+    .source-node:hover { border-color: rgba(120,63,228,0.35); }
+    .source-node-icon { font-size: 18px; flex-shrink: 0; }
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .flow-arrow-line {
+      width: 2px;
+      height: 36px;
+      background: linear-gradient(180deg, rgba(120,63,228,0.5), var(--green));
+      position: relative;
+    }
+    .flow-arrow-line::after {
+      content: '▼';
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--green);
+      font-size: 12px;
+    }
+    .intelligence-output {
+      background: linear-gradient(135deg, rgba(120,63,228,0.18), rgba(61,253,160,0.08));
+      border: 1px solid rgba(120,63,228,0.35);
+      border-radius: 14px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 2;
+    }
+    .intelligence-output-icon {
+      width: 44px; height: 44px;
+      background: rgba(120,63,228,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .intelligence-output-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+    .intelligence-output-text p {
+      font-size: 12px;
+      color: var(--purple-light);
+      font-weight: 500;
+    }
+
+    /* ═══════════════════════════════════════════
+       PRODUCTS GALLERY
+    ═══════════════════════════════════════════ */
+    #deliverables { padding: 100px 0 80px; }
+
+    .gallery-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      max-width: 1160px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 28px;
+    }
+    .gallery-header-left { display: flex; flex-direction: column; gap: 12px; }
+    .gallery-header h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+    .gallery-header p { max-width: 480px; color: var(--neutral); font-size: 16px; line-height: 1.7; }
+    .gallery-nav { display: flex; gap: 8px; flex-shrink: 0; }
+    .gallery-nav-btn {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .gallery-nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+    .gallery-nav-btn:disabled { opacity: 0.28; cursor: not-allowed; }
+    .gallery-nav-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    @media (max-width: 768px) { .gallery-nav { display: none; } }
+
+    .gallery-track-wrap { overflow: hidden; width: 100%; }
+    .gallery-track {
+      display: flex;
+      gap: 20px;
+      padding-left: max(28px, calc(50vw - 552px));
+      transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+      will-change: transform;
+    }
+    .gallery-item {
+      flex: 0 0 380px;
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 27rem;
+      display: block;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) { .gallery-item { flex: 0 0 300px; } }
+    .gallery-item img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(30,0,80,0.25) 45%,
+        rgba(7,0,26,0.88) 100%);
+    }
+    .gallery-item-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 28px 32px;
+      color: var(--white);
+    }
+    .gallery-item-tag {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 4px 13px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: rgba(255,255,255,0.88);
+    }
+    .gallery-item-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+    }
+    .gallery-item-desc {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .gallery-item-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .gallery-item:hover .gallery-item-link { color: #fff; }
+    .gallery-item-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+    .gallery-item:hover .gallery-item-link svg { transform: translateX(4px); }
+
+    .gallery-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 40px;
+    }
+    .gallery-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(120,63,228,0.25);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .gallery-dot.active { background: var(--purple); transform: scale(1.3); }
+
+    /* ═══════════════════════════════════════════
+       HOW IT WORKS
+    ═══════════════════════════════════════════ */
+    #how-it-works {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #how-it-works .section-header { margin-bottom: 64px; text-align: center; max-width: none; }
+    #how-it-works .section-title  { text-align: center; }
+    #how-it-works .section-sub    { text-align: center; margin: 0 auto; }
+
+    /* Numbered connector row */
+    .hiw-connector {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 860px;
+      margin: 0 auto 24px;
+    }
+    .hiw-connector::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(100% / 8);
+      right: calc(100% / 8);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(120,63,228,0.5), var(--green));
+      transform: translateY(-50%);
+    }
+    .hiw-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--neutral-dark);
+      border: 2px solid rgba(120,63,228,0.5);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--purple-light);
+      justify-self: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hiw-num.active {
+      background: var(--purple);
+      border-color: var(--purple);
+      color: var(--white);
+      box-shadow: 0 0 20px rgba(120,63,228,0.6);
+    }
+
+    /* Cards grid */
+    .hiw-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1160px;
+    }
+    @media (max-width: 900px)  { .hiw-grid { grid-template-columns: 1fr 1fr; } .hiw-connector { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px)  { .hiw-grid { grid-template-columns: 1fr; } .hiw-connector { grid-template-columns: 1fr; } .hiw-connector::before { display: none; } }
+
+    .hiw-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+    .hiw-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(120,63,228,0.4);
+      background: rgba(120,63,228,0.07);
+    }
+    .hiw-icon {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      background: rgba(120,63,228,0.14);
+      border: 1px solid rgba(120,63,228,0.28);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple-light);
+      flex-shrink: 0;
+    }
+    .hiw-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .hiw-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      letter-spacing: -0.2px;
+    }
+    .hiw-card p {
+      font-size: 13.5px;
+      color: var(--neutral);
+      line-height: 1.7;
+      font-weight: 400;
+      flex-grow: 1;
+    }
+
+    /* ═══════════════════════════════════════════
+       STATS
+    ═══════════════════════════════════════════ */
+    #stats {
+      padding: 80px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: linear-gradient(180deg, rgba(120,63,228,0.06) 0%, transparent 100%);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+
+    .stat-block {
+      text-align: center;
+      padding: 40px 20px;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+    .stat-block:last-child { border-right: none; }
+    @media (max-width: 768px) {
+      .stat-block:nth-child(2) { border-right: none; }
+      .stat-block { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    }
+    .stat-val {
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-val.purple {
+      background: linear-gradient(135deg, var(--purple-light), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-val.green {
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-desc { font-size: 13px; color: var(--neutral); font-weight: 500; }
+
+    /* ═══════════════════════════════════════════
+       PRICING
+    ═══════════════════════════════════════════ */
+    #pricing {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #pricing .section-header { margin: 0 auto 64px; text-align: center; max-width: none; }
+    #pricing .section-title { text-align: center; }
+    #pricing .section-sub  { text-align: center; margin: 0 auto; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px)  { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
+
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 32px 28px;
+      position: relative;
+      transition: transform 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured {
+      background: rgba(120,63,228,0.1);
+      border-color: rgba(120,63,228,0.48);
+    }
+    .featured-label {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--purple);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--neutral);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .plan-price {
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .plan-price sup { font-size: 20px; vertical-align: top; margin-top: 7px; font-weight: 600; }
+    .plan-price .period { font-size: 14px; font-weight: 400; color: var(--neutral); letter-spacing: 0; }
+    .plan-unit { font-size: 12px; color: var(--neutral); margin-bottom: 14px; font-weight: 400; }
+    .plan-desc { font-size: 13px; color: var(--neutral); margin-bottom: 22px; line-height: 1.65; font-weight: 400; }
+
+    .plan-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 20px 0; }
+
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+    .plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    .plan-features li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════════════ */
+    #cta-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-glow {
+      position: absolute;
+      width: 700px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(120,63,228,0.18) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .contact-layout {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+    }
+    @media (max-width: 900px) {
+      .contact-layout { flex-direction: column; gap: 48px; }
+    }
+
+    /* Left column */
+    .contact-left { flex: 0 0 380px; max-width: 380px; }
+    @media (max-width: 900px) { .contact-left { flex: none; max-width: none; } }
+
+    .contact-left .section-tag { margin-bottom: 16px; }
+    .contact-left h2 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .contact-left p {
+      font-size: 15px;
+      color: var(--neutral);
+      line-height: 1.75;
+      font-weight: 400;
+      margin-bottom: 36px;
+    }
+
+    .contact-methods { display: flex; flex-direction: column; gap: 20px; }
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.72);
+      font-weight: 400;
+    }
+    .contact-method-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(120,63,228,0.12);
+      border: 1px solid rgba(120,63,228,0.28);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--purple-light);
+    }
+    .contact-method-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Right column — form */
+    .contact-right { flex: 1; }
+
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 40px 36px;
+    }
+    @media (max-width: 480px) { .contact-form { padding: 28px 20px; } }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+    .form-group:last-of-type { margin-bottom: 0; }
+
+    .form-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.03em;
+    }
+    .form-input,
+    .form-textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.22); }
+    .form-input:focus, .form-textarea:focus {
+      border-color: rgba(120,63,228,0.7);
+      background: rgba(120,63,228,0.06);
+    }
+    .form-textarea { height: 130px; resize: none; }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px 28px;
+      background: var(--purple);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      animation: glow-pulse 2.8s ease-in-out infinite;
+    }
+    .form-submit:hover {
+      background: var(--purple-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(120,63,228,0.6);
+      animation: none;
+    }
+    .form-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--neutral);
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 60px 0 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 52px;
+    }
+    @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+    .footer-brand img { height: 220px; width: auto; display: block; margin-bottom: 16px; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--neutral);
+      line-height: 1.7;
+      max-width: 240px;
+      font-weight: 400;
+    }
+
+    .footer-col h4 {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--neutral);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.48);
+      transition: color 0.2s;
+      font-weight: 400;
+    }
+    .footer-col a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--neutral); font-weight: 400; }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: 13px; color: var(--neutral); transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="brand_assets/Logo New.jpg" alt="The Home of Insights" height="52" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#methodology">Services</a></li>
+      <li><a href="#deliverables">Examples</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#cta-section">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <!-- Video background -->
+  <video class="hero-video" autoplay loop muted playsinline>
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-video-overlay"></div>
+
+  <!-- Full-bleed toggle -->
+  <button id="hero-toggle-btn" class="hero-toggle" aria-label="Switch to fit-to-content">
+    <!-- Minimize icon (default: full-bleed active) -->
+    <svg id="icon-minimize" viewBox="0 0 24 24"><polyline points="8 3 3 3 3 8"/><polyline points="21 8 21 3 16 3"/><polyline points="8 21 3 21 3 16"/><polyline points="21 16 21 21 16 21"/></svg>
+    <!-- Maximize icon (hidden when full-bleed) -->
+    <svg id="icon-maximize" viewBox="0 0 24 24" style="display:none"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+  </button>
+
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container" style="position:relative;z-index:3;">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1 class="reveal d1">
+          Welcome to<br>The Home of Insights
+        </h1>
+        <p class="hero-sub reveal d2">
+          Cut through the noise. Turn information into actionable insights.
+        </p>
+        <div class="hero-cta reveal d3">
+          <a href="#features" class="btn btn-primary">Explore Our Services</a>
+          <a href="#pricing" class="btn btn-outline">Free Weekly Briefing</a>
+        </div>
+        <p class="hero-note reveal d4">Based on carefully selected publicly available sources</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METHODOLOGY ═══ -->
+<section id="methodology">
+  <div class="container">
+    <div class="split-row reveal">
+      <div class="split-content">
+        <span class="section-tag">Our Methodology</span>
+        <h2 class="section-title" style="font-size:clamp(26px,3.5vw,38px);">From Public Data<br>to Strategic Clarity</h2>
+        <p class="section-sub">Our findings are based solely on secondary market research, rigorously curated from publicly available sources. We transform publicly accessible raw data into foundational clarity designed to drive dynamic decision-making without the high cost of manual primary research.</p>
+        <ul>
+          <li>Consultancy reports &amp; industry association data</li>
+          <li>LinkedIn profiles &amp; professional network signals</li>
+          <li>Event briefings &amp; conference intelligence</li>
+          <li>Company filings — annual reports, 10-K filings, success stories &amp; case studies</li>
+        </ul>
+        <a href="#pricing" class="btn btn-primary">See Our Services</a>
+      </div>
+      <div class="meth-flow">
+        <!-- 2×2 mini shader source cards -->
+        <div class="meth-grid">
+          <div class="shader-card sc-mini" style="--sc-base:hsl(290,80%,10%);--sc-c1:hsla(280,100%,50%,0.9);--sc-c2:hsla(320,100%,58%,0.8);--sc-c3:hsla(300,100%,68%,0.7);--sc-speed:7s;">
+            <div class="sc-glow"></div>
+            <div class="sc-content">
+              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <h3 class="sc-title">Consultancy Reports</h3>
+            </div>
+          </div>
+          <div class="shader-card sc-mini" style="--sc-base:hsl(190,80%,9%);--sc-c1:hsla(200,100%,40%,0.9);--sc-c2:hsla(180,100%,52%,0.8);--sc-c3:hsla(160,90%,45%,0.7);--sc-speed:9s;">
+            <div class="sc-glow"></div>
+            <div class="sc-content">
+              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18M9 21V7l3-4 3 4v14M5 21V11l-2-2M19 21V11l2-2"/><rect x="9" y="11" width="6" height="4"/></svg>
+              <h3 class="sc-title">Professional Industry Associations</h3>
+            </div>
+          </div>
+          <div class="shader-card sc-mini" style="--sc-base:hsl(130,70%,8%);--sc-c1:hsla(120,100%,32%,0.9);--sc-c2:hsla(140,100%,50%,0.8);--sc-c3:hsla(100,90%,40%,0.7);--sc-speed:8s;">
+            <div class="sc-glow"></div>
+            <div class="sc-content">
+              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <h3 class="sc-title">Annual Reports &amp; 10-K Filings</h3>
+            </div>
+          </div>
+          <div class="shader-card sc-mini" style="--sc-base:hsl(35,80%,9%);--sc-c1:hsla(30,100%,48%,0.9);--sc-c2:hsla(50,100%,58%,0.8);--sc-c3:hsla(42,90%,52%,0.7);--sc-speed:6s;">
+            <div class="sc-glow"></div>
+            <div class="sc-content">
+              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <h3 class="sc-title">Event Briefings</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Down arrow -->
+        <div class="flow-arrow">
+          <div class="flow-arrow-line"></div>
+        </div>
+
+        <!-- Actionable Intelligence output -->
+        <div class="shader-card sc-output" style="--sc-base:hsl(340,70%,9%);--sc-c1:hsla(330,100%,42%,0.9);--sc-c2:hsla(350,100%,58%,0.8);--sc-c3:hsla(340,90%,68%,0.7);--sc-speed:7.5s;">
+          <div class="sc-glow"></div>
+          <div class="sc-content">
+            <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <div>
+              <h3 class="sc-title">Actionable Intelligence</h3>
+              <p class="sc-output-sub">Precise · Actionable · Decision-Ready</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">From request to insight — in four simple steps</h2>
+      <p class="section-sub">No lengthy onboarding. Just tell us what you need and we handle the rest.</p>
+    </div>
+
+    <!-- Step numbers with connecting line -->
+    <div class="hiw-connector">
+      <div class="hiw-num active">1</div>
+      <div class="hiw-num">2</div>
+      <div class="hiw-num">3</div>
+      <div class="hiw-num">4</div>
+    </div>
+
+    <!-- Step cards -->
+    <div class="hiw-grid">
+
+      <div class="hiw-card reveal d1">
+        <div class="hiw-icon">
+          <!-- layers / pick -->
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <h3>Choose your product</h3>
+        <p>Browse our intelligence tiers — free weekly briefing, newsletter, company profile, or full custom report — and pick the one that matches your strategic need.</p>
+      </div>
+
+      <div class="hiw-card reveal d2">
+        <div class="hiw-icon">
+          <!-- form / edit -->
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h3>Fill in the form</h3>
+        <p>Tell us your focus area, target companies, markets, or competitors. The more context you provide, the sharper and more actionable your intelligence will be.</p>
+      </div>
+
+      <div class="hiw-card reveal d3">
+        <div class="hiw-icon">
+          <!-- mail / invoice -->
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Approve &amp; pay the invoice</h3>
+        <p>We'll send a confirmation email with scope details and an invoice. Once you approve and payment is received, your order moves into production immediately.</p>
+      </div>
+
+      <div class="hiw-card reveal d4">
+        <div class="hiw-icon">
+          <!-- inbox / deliver -->
+          <svg viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
+        </div>
+        <h3>Delivered within 5 working days</h3>
+        <p>Your finished intelligence product arrives directly in your inbox — ready to present, share with your team, and act on without delay.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DELIVERABLES PREVIEW ═══ -->
+<section id="deliverables">
+  <!-- Header inside container for alignment -->
+  <div class="gallery-header reveal">
+    <div class="gallery-header-left">
+      <span class="section-tag">Our Products</span>
+      <h2>Intelligence products<br>built for every need</h2>
+      <p>Three distinct deliverables — each designed to give you the right depth of intelligence at the right moment.</p>
+    </div>
+    <div class="gallery-nav">
+      <button id="gallery-prev" class="gallery-nav-btn" aria-label="Previous" disabled>
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </button>
+      <button id="gallery-next" class="gallery-nav-btn" aria-label="Next">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Full-width scrolling track -->
+  <div class="gallery-track-wrap">
+    <div class="gallery-track" id="gallery-track">
+
+      <!-- Card 1: Newsletter -->
+      <a href="#pricing" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" />
+        <div class="gallery-item-overlay"></div>
+        <div class="gallery-item-content">
+          <span class="gallery-item-tag">Newsletter</span>
+          <div class="gallery-item-title">Market Intelligence Newsletter</div>
+          <div class="gallery-item-desc">Curated strategic briefings delivered weekly, monthly, or daily — market trends, competitive signals, and sector analysis distilled for busy leaders.</div>
+          <div class="gallery-item-link">
+            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Company Profiles -->
+      <a href="#pricing" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" />
+        <div class="gallery-item-overlay"></div>
+        <div class="gallery-item-content">
+          <span class="gallery-item-tag">Company Profile</span>
+          <div class="gallery-item-title">Company Profiles</div>
+          <div class="gallery-item-desc">In-depth intelligence on any company — financials, strategic positioning, vulnerabilities, and recent developments — before your critical meeting.</div>
+          <div class="gallery-item-link">
+            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Industry Reports -->
+      <a href="#pricing" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" />
+        <div class="gallery-item-overlay"></div>
+        <div class="gallery-item-content">
+          <span class="gallery-item-tag">Industry Report</span>
+          <div class="gallery-item-title">Custom Industry Reports</div>
+          <div class="gallery-item-desc">Full-scope intelligence reports with executive summaries, market dynamics analysis, competitive driver mapping, and numbered strategic recommendations.</div>
+          <div class="gallery-item-link">
+            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Dot indicators -->
+  <div class="gallery-dots">
+    <button class="gallery-dot active" aria-label="Go to slide 1"></button>
+    <button class="gallery-dot" aria-label="Go to slide 2"></button>
+    <button class="gallery-dot" aria-label="Go to slide 3"></button>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Pricing</span>
+      <h2 class="section-title">Pick the Intelligence Tier That Matches<br>Your Strategic Needs</h2>
+      <p class="section-sub">From free weekly briefings to custom strategic reports — intelligence at every level.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Newsletter -->
+      <div class="pricing-card reveal d1">
+        <div class="plan-name">Market Intelligence Newsletter</div>
+        <div class="plan-price"><sup>$</sup>99<span class="period">/mo</span></div>
+        <div class="plan-unit">per user</div>
+        <p class="plan-desc">Save time and receive curated, strategic insights monthly, weekly, or daily.</p>
+        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>Monthly / Weekly / Daily cadence</li>
+          <li>Curated strategic insights</li>
+          <li>Market trend analysis</li>
+          <li>Competitive landscape updates</li>
+          <li>Priority email delivery</li>
+        </ul>
+      </div>
+
+      <!-- Profiles -->
+      <div class="pricing-card featured reveal d2">
+        <div class="featured-label">Most Popular</div>
+        <div class="plan-name">Company Profiles</div>
+        <div class="plan-price"><sup>$</sup>399</div>
+        <div class="plan-unit">per profile</div>
+        <p class="plan-desc">Get detailed profiles on financials, developments, and vulnerabilities before crucial customer meetings.</p>
+        <a href="#cta-section" class="btn btn-primary" style="width:100%;justify-content:center;">Order a Profile</a>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>Financial overview</li>
+          <li>Recent developments</li>
+          <li>Vulnerability analysis</li>
+          <li>Meeting preparation brief</li>
+          <li>Delivered within agreed timeline</li>
+        </ul>
+      </div>
+
+      <!-- Reports -->
+      <div class="pricing-card reveal d3">
+        <div class="plan-name">Custom Industry Reports</div>
+        <div class="plan-price" style="font-size:36px;letter-spacing:-1px;"><sup style="font-size:18px;">$</sup>1,499</div>
+        <div class="plan-unit">per report</div>
+        <p class="plan-desc">Receive custom trend reports analyzing market dynamics and competitive drivers to optimize strategy.</p>
+        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Request a Report</a>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>Custom scope &amp; focus</li>
+          <li>Market dynamics analysis</li>
+          <li>Competitive driver mapping</li>
+          <li>Strategic recommendations</li>
+          <li>Executive-ready format</li>
+        </ul>
+      </div>
+
+      <!-- Free -->
+      <div class="pricing-card reveal d4">
+        <div class="plan-name">Free Weekly Briefing</div>
+        <div class="plan-price"><sup>$</sup>0</div>
+        <div class="plan-unit">always free</div>
+        <p class="plan-desc">Stay informed with our free weekly briefing delivered straight to your inbox, focusing on general technology trends and innovative case studies.</p>
+        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Subscribe Free</a>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>General technology trends</li>
+          <li>Innovative case studies</li>
+          <li>Weekly delivery</li>
+          <li>No credit card required</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER MOCKUP ═══ -->
+<section id="newsletter-mockup">
+  <div class="container">
+    <div class="mockup-grid">
+
+      <!-- Left: text -->
+      <div class="mockup-text reveal d1">
+        <span class="section-tag">Free Weekly Briefing</span>
+        <h2 class="mockup-title">Intelligence,<br>delivered to you.</h2>
+        <p class="mockup-desc">Get a tailored Monday morning brief directly in your inbox — market trends, competitive signals, and sector analysis distilled for busy leaders. No paywalls, no noise. Just what matters.</p>
+        <a href="#cta-section" class="btn btn-primary" style="margin-top:8px;">Subscribe Free</a>
+      </div>
+
+      <!-- Right: stacked mockup images -->
+      <div class="mockup-images reveal d2">
+        <!-- Back card -->
+        <div class="mockup-card mockup-card-back">
+          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-1_4x.9cc114e6.png" alt="Newsletter preview back" />
+        </div>
+        <!-- Front card -->
+        <div class="mockup-card mockup-card-front">
+          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-2_4x.e594b737.png" alt="Newsletter preview front" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Bottom divider -->
+  <div class="mockup-divider"></div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="cta-section">
+  <div class="contact-glow"></div>
+  <div class="container">
+    <div class="contact-layout reveal">
+
+      <!-- Left: heading + contact info -->
+      <div class="contact-left">
+        <span class="section-tag">Contact</span>
+        <h2>Let us know how we can help</h2>
+        <p>We're here to help and answer any question you might have. Tell us about your intelligence needs and we'll get back to you promptly.</p>
+        <ul class="contact-methods">
+          <li class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            hello@thehomeofinsights.com
+          </li>
+          <li class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            </div>
+            Available via email &amp; LinkedIn
+          </li>
+          <li class="contact-method">
+            <div class="contact-method-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 018 8c0 5.25-8 13-8 13S4 15.25 4 10a8 8 0 018-8z"/></svg>
+            </div>
+            Remote — serving clients globally
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-right">
+        <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Full name</label>
+              <input class="form-input" id="cf-name" type="text" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Work email</label>
+              <input class="form-input" id="cf-email" type="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-company">Company</label>
+              <input class="form-input" id="cf-company" type="text" placeholder="Acme Corp" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-service">Service of interest</label>
+              <select class="form-input" id="cf-service" style="appearance:none;cursor:pointer;">
+                <option value="" disabled selected>Select a service…</option>
+                <option>Free Weekly Briefing</option>
+                <option>Market Intelligence Newsletter</option>
+                <option>Company Profile</option>
+                <option>Custom Industry Report</option>
+                <option>Other / Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="cf-message">Tell us more about your needs</label>
+            <textarea class="form-textarea" id="cf-message" placeholder="Describe what you're trying to learn, the market or competitors you're tracking, and any timeline or budget considerations…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+          <p class="form-note">No primary research costs · Publicly sourced · Professionally synthesized</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="brand_assets/Logo New.jpg" alt="The Home of Insights" />
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#pricing">Market Intelligence Newsletter</a></li>
+          <li><a href="#pricing">Company Profiles</a></li>
+          <li><a href="#pricing">Custom Industry Reports</a></li>
+          <li><a href="#pricing">Free Weekly Briefing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#methodology">About</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#cta-section">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 The Home of Insights. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Hero reveals immediately
+  setTimeout(() => {
+    document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
+  }, 100);
+
+  // Hero full-bleed toggle
+  const heroSection = document.getElementById('hero');
+  const toggleBtn = document.getElementById('hero-toggle-btn');
+  const iconMin = document.getElementById('icon-minimize');
+  const iconMax = document.getElementById('icon-maximize');
+  let isFullBleed = true;
+  toggleBtn.addEventListener('click', () => {
+    isFullBleed = !isFullBleed;
+    heroSection.classList.toggle('fit-content', !isFullBleed);
+    iconMin.style.display = isFullBleed ? '' : 'none';
+    iconMax.style.display = isFullBleed ? 'none' : '';
+    toggleBtn.setAttribute('aria-label', isFullBleed ? 'Switch to fit-to-content' : 'Switch to full-bleed');
+  });
+
+  // Logo background removal — strips dark pixels from Logo.png so it blends
+  function removeLogoBg(img) {
+    const run = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const d = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const px = d.data;
+      for (let i = 0; i < px.length; i += 4) {
+        // Perceived brightness (weighted)
+        const lum = px[i] * 0.299 + px[i+1] * 0.587 + px[i+2] * 0.114;
+        if (lum < 38) {
+          px[i+3] = 0;                           // fully transparent
+        } else if (lum < 90) {
+          px[i+3] = Math.round((lum - 38) / 52 * 255); // soft edge
+        }
+      }
+      ctx.putImageData(d, 0, 0);
+      img.src = canvas.toDataURL('image/png');
+    };
+    if (img.complete && img.naturalWidth) { run(); }
+    else { img.addEventListener('load', run, { once: true }); }
+  }
+  document.querySelectorAll('.nav-logo img, .footer-brand img').forEach(removeLogoBg);
+
+  // Products gallery carousel
+  (function () {
+    const track   = document.getElementById('gallery-track');
+    if (!track) return;
+    const items   = track.querySelectorAll('.gallery-item');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    const dots    = document.querySelectorAll('.gallery-dot');
+    let current   = 0;
+
+    function itemWidth() {
+      return items[0].getBoundingClientRect().width + 20;
+    }
+    function update() {
+      track.style.transform = `translateX(-${current * itemWidth()}px)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (prevBtn) prevBtn.disabled = current === 0;
+      if (nextBtn) nextBtn.disabled = current >= items.length - 1;
+    }
+    if (prevBtn) prevBtn.addEventListener('click', () => { if (current > 0) { current--; update(); } });
+    if (nextBtn) nextBtn.addEventListener('click', () => { if (current < items.length - 1) { current++; update(); } });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { current = i; update(); }));
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+
+</body>
+</html>
