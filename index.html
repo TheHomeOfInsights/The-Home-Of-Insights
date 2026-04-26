@@ -7,6 +7,85 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- SEO: core meta -->
+  <meta name="description" content="The Home of Insights delivers market & competitive intelligence for executives. Weekly briefings, company profiles, and custom industry reports — starting free." />
+  <link rel="canonical" href="https://thehomeofinsights.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- SEO: Open Graph (LinkedIn / Facebook) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="The Home of Insights — Market & Competitive Intelligence" />
+  <meta property="og:description" content="Actionable market intelligence for executives. Weekly briefings, company profiles, and custom industry reports — delivered in 5 days." />
+  <meta property="og:url"         content="https://thehomeofinsights.com/" />
+  <!-- TODO: Replace og:image with a 1200×630 social preview image before publishing -->
+  <meta property="og:image"       content="https://thehomeofinsights.com/brand_assets/Logo%20New.jpg" />
+
+  <!-- SEO: Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="The Home of Insights — Market & Competitive Intelligence" />
+  <meta name="twitter:description" content="Actionable market intelligence for executives. Weekly briefings, company profiles, and custom industry reports." />
+  <meta name="twitter:image"       content="https://thehomeofinsights.com/brand_assets/Logo%20New.jpg" />
+
+  <!-- SEO: JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "The Home of Insights",
+        "url": "https://thehomeofinsights.com",
+        "logo": "https://thehomeofinsights.com/brand_assets/Logo%20New.jpg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@thehomeofinsights.com",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Intelligence Services",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Service",
+              "name": "Market Intelligence Newsletter",
+              "description": "Curated strategic briefings delivered weekly, monthly, or daily — market trends, competitive signals, and sector analysis for busy leaders.",
+              "offers": { "@type": "Offer", "price": "99", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "99", "priceCurrency": "USD", "unitText": "per month" } }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Service",
+              "name": "Company Profiles",
+              "description": "In-depth competitive intelligence on any company — financials, vulnerabilities, and recent developments before your critical meeting.",
+              "offers": { "@type": "Offer", "price": "399", "priceCurrency": "USD" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Service",
+              "name": "Custom Industry Reports",
+              "description": "Comprehensive market analysis with strategic recommendations — custom scope, competitive driver mapping, executive-ready format.",
+              "offers": { "@type": "Offer", "price": "1499", "priceCurrency": "USD" }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Performance: preload hero video -->
+  <link rel="preload" as="fetch" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" crossorigin />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1460,9 +1539,86 @@
     .footer-legal { display: flex; gap: 20px; }
     .footer-legal a { font-size: 13px; color: var(--neutral); transition: color 0.2s; }
     .footer-legal a:hover { color: var(--white); }
+
+    /* ─── SKIP LINK ─── */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 9999;
+      background: var(--purple);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* ─── FOCUS VISIBLE ─── */
+    :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+    /* ─── FORM: validation states ─── */
+    .form-input.error, .form-textarea.error {
+      border-color: rgba(253, 80, 80, 0.7);
+      background: rgba(253, 80, 80, 0.04);
+    }
+    .form-input.valid, .form-textarea.valid {
+      border-color: rgba(61, 253, 160, 0.5);
+    }
+    .field-error {
+      font-size: 11.5px;
+      color: #fd7070;
+      margin-top: 4px;
+      display: none;
+    }
+    .field-error.visible { display: block; }
+    .form-label .required { color: #fd7070; margin-left: 2px; }
+
+    /* ─── FORM: better touch targets ─── */
+    .form-input, .form-textarea {
+      padding: 14px 16px;
+    }
+    .btn.plan-btn { min-height: 44px; }
+
+    /* ─── PRICING: free tier accent ─── */
+    .pricing-card.free-tier {
+      border-color: rgba(61, 253, 160, 0.3);
+    }
+    .pricing-card.free-tier:hover {
+      border-color: rgba(61, 253, 160, 0.55);
+    }
+    .free-label {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    /* ─── HERO: mobile button stacking ─── */
+    @media (max-width: 480px) {
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+      }
+      .hero-cta .btn { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
@@ -1480,6 +1636,8 @@
     </div>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
@@ -1510,7 +1668,7 @@
           Cut through the noise. Turn information into actionable insights.
         </p>
         <div class="hero-cta reveal d3">
-          <a href="#features" class="btn btn-primary">Explore Our Services</a>
+          <a href="#methodology" class="btn btn-primary">Explore Our Services</a>
           <a href="#pricing" class="btn btn-outline">Free Weekly Briefing</a>
         </div>
         <p class="hero-note reveal d4">Based on carefully selected publicly available sources</p>
@@ -1650,6 +1808,30 @@
   </div>
 </section>
 
+<!-- ═══ STATS ═══ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-val purple" data-count="500" data-suffix="+">500+</div>
+        <div class="stat-desc">Curated public sources</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-val green" data-count="5" data-suffix=" Day">5 Day</div>
+        <div class="stat-desc">Delivery turnaround</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-val purple" data-count="100" data-suffix="%">100%</div>
+        <div class="stat-desc">Publicly sourced intelligence</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-val green" data-count="3" data-suffix="">3</div>
+        <div class="stat-desc">Intelligence products</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ DELIVERABLES PREVIEW ═══ -->
 <section id="deliverables">
   <!-- Header inside container for alignment -->
@@ -1675,7 +1857,7 @@
 
       <!-- Card 1: Newsletter -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" />
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Newsletter</span>
@@ -1689,7 +1871,7 @@
 
       <!-- Card 2: Company Profiles -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" />
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Company Profile</span>
@@ -1703,7 +1885,7 @@
 
       <!-- Card 3: Industry Reports -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" />
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Industry Report</span>
@@ -1743,7 +1925,7 @@
         <div class="plan-price"><sup>$</sup>99<span class="period">/mo</span></div>
         <div class="plan-unit">per user</div>
         <p class="plan-desc">Save time and receive curated, strategic insights monthly, weekly, or daily.</p>
-        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Get Started</a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li>Monthly / Weekly / Daily cadence</li>
@@ -1761,7 +1943,7 @@
         <div class="plan-price"><sup>$</sup>399</div>
         <div class="plan-unit">per profile</div>
         <p class="plan-desc">Get detailed profiles on financials, developments, and vulnerabilities before crucial customer meetings.</p>
-        <a href="#cta-section" class="btn btn-primary" style="width:100%;justify-content:center;">Order a Profile</a>
+        <a href="#cta-section" class="btn btn-primary plan-btn" style="width:100%;justify-content:center;">Order a Profile</a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li>Financial overview</li>
@@ -1778,7 +1960,7 @@
         <div class="plan-price" style="font-size:36px;letter-spacing:-1px;"><sup style="font-size:18px;">$</sup>1,499</div>
         <div class="plan-unit">per report</div>
         <p class="plan-desc">Receive custom trend reports analyzing market dynamics and competitive drivers to optimize strategy.</p>
-        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Request a Report</a>
+        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Request a Report</a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li>Custom scope &amp; focus</li>
@@ -1790,12 +1972,13 @@
       </div>
 
       <!-- Free -->
-      <div class="pricing-card reveal d4">
+      <div class="pricing-card free-tier reveal d4">
+        <div class="free-label">Start for Free</div>
         <div class="plan-name">Free Weekly Briefing</div>
         <div class="plan-price"><sup>$</sup>0</div>
         <div class="plan-unit">always free</div>
         <p class="plan-desc">Stay informed with our free weekly briefing delivered straight to your inbox, focusing on general technology trends and innovative case studies.</p>
-        <a href="#cta-section" class="btn btn-outline" style="width:100%;justify-content:center;">Subscribe Free</a>
+        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Subscribe Free</a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <li>General technology trends</li>
@@ -1826,11 +2009,11 @@
       <div class="mockup-images reveal d2">
         <!-- Back card -->
         <div class="mockup-card mockup-card-back">
-          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-1_4x.9cc114e6.png" alt="Newsletter preview back" />
+          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-1_4x.9cc114e6.png" alt="Newsletter preview back" loading="lazy" />
         </div>
         <!-- Front card -->
         <div class="mockup-card mockup-card-front">
-          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-2_4x.e594b737.png" alt="Newsletter preview front" />
+          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-2_4x.e594b737.png" alt="Newsletter preview front" loading="lazy" />
         </div>
       </div>
 
@@ -1878,12 +2061,13 @@
         <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="cf-name">Full name</label>
+              <label class="form-label" for="cf-name">Full name<span class="required" aria-hidden="true">*</span></label>
               <input class="form-input" id="cf-name" type="text" placeholder="Jane Smith" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="cf-email">Work email</label>
+              <label class="form-label" for="cf-email">Work email<span class="required" aria-hidden="true">*</span></label>
               <input class="form-input" id="cf-email" type="email" placeholder="jane@company.com" required />
+              <span class="field-error" id="email-error">Please enter a valid email address.</span>
             </div>
           </div>
           <div class="form-row">
@@ -1904,10 +2088,10 @@
             </div>
           </div>
           <div class="form-group" style="margin-bottom:0;">
-            <label class="form-label" for="cf-message">Tell us more about your needs</label>
+            <label class="form-label" for="cf-message">Tell us more about your needs<span class="required" aria-hidden="true">*</span></label>
             <textarea class="form-textarea" id="cf-message" placeholder="Describe what you're trying to learn, the market or competitors you're tracking, and any timeline or budget considerations…" required></textarea>
           </div>
-          <button type="submit" class="form-submit">Send Message</button>
+          <button type="submit" class="form-submit" id="form-submit-btn">Send Message</button>
           <p class="form-note">No primary research costs · Publicly sourced · Professionally synthesized</p>
         </form>
       </div>
@@ -1915,6 +2099,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
@@ -1943,17 +2129,17 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#cta-section" title="Coming soon">FAQ</a></li>
+          <li><a href="#cta-section" title="Coming soon">Privacy Policy</a></li>
+          <li><a href="#cta-section" title="Coming soon">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 The Home of Insights. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+        <a href="#cta-section" title="Coming soon">Privacy</a>
+        <a href="#cta-section" title="Coming soon">Terms</a>
       </div>
     </div>
   </div>
@@ -2056,6 +2242,91 @@
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
+
+  // Count-up animation for stats
+  (function () {
+    const statEls = document.querySelectorAll('.stat-val[data-count]');
+    if (!statEls.length) return;
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1200;
+        const steps = 40;
+        const step = duration / steps;
+        let current = 0;
+        countObserver.unobserve(el);
+        const timer = setInterval(() => {
+          current += target / steps;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = Math.floor(current) + suffix;
+        }, step);
+      });
+    }, { threshold: 0.5 });
+    statEls.forEach(el => countObserver.observe(el));
+  })();
+
+  // Contact form: validation + disable on submit
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('cf-email');
+    const emailError = document.getElementById('email-error');
+    const submitBtn  = document.getElementById('form-submit-btn');
+    let valid = true;
+
+    // Email validation
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(emailInput.value.trim())) {
+      emailInput.classList.add('error');
+      emailInput.classList.remove('valid');
+      if (emailError) { emailError.classList.add('visible'); }
+      valid = false;
+    } else {
+      emailInput.classList.remove('error');
+      emailInput.classList.add('valid');
+      if (emailError) { emailError.classList.remove('visible'); }
+    }
+
+    if (!valid) return;
+
+    // Disable button and show confirmation
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.cursor = 'not-allowed';
+    submitBtn.textContent = 'Request Sent ✓';
+    submitBtn.style.animation = 'none';
+  }
+
+  // Live email validation feedback
+  (function () {
+    const emailInput = document.getElementById('cf-email');
+    const emailError = document.getElementById('email-error');
+    if (!emailInput) return;
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    emailInput.addEventListener('blur', () => {
+      if (emailInput.value && !emailRe.test(emailInput.value.trim())) {
+        emailInput.classList.add('error');
+        emailInput.classList.remove('valid');
+        if (emailError) emailError.classList.add('visible');
+      } else if (emailInput.value) {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('valid');
+        if (emailError) emailError.classList.remove('visible');
+      }
+    });
+    emailInput.addEventListener('input', () => {
+      if (emailInput.classList.contains('error') && emailRe.test(emailInput.value.trim())) {
+        emailInput.classList.remove('error');
+        emailInput.classList.add('valid');
+        if (emailError) emailError.classList.remove('visible');
+      }
+    });
+  })();
 </script>
 
 </body>
