@@ -1849,8 +1849,8 @@
     <div class="gallery-track" id="gallery-track">
 
       <!-- Card 1: Newsletter -->
-      <a href="#pricing" class="gallery-item">
-        <img src="visual-aws-anthropic.png" alt="Market Intelligence Newsletter — AWS × Anthropic $100B Deal" loading="lazy" />
+      <a href="#" class="gallery-item" id="newsletter-example-btn" onclick="openBriefingLightbox(event)">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Newsletter</span>
@@ -1864,7 +1864,7 @@
 
       <!-- Card 2: Company Profiles -->
       <a href="#pricing" class="gallery-item">
-        <img src="visual-mckinsey-google.png" alt="Company Profiles — McKinsey × Google Cloud" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Company Profile</span>
@@ -1878,7 +1878,7 @@
 
       <!-- Card 3: Industry Reports -->
       <a href="#pricing" class="gallery-item">
-        <img src="visual-thoma-bravo-google.png" alt="Custom Industry Reports — Thoma Bravo × Google Cloud" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Industry Report</span>
@@ -2095,6 +2095,32 @@
 
 </main>
 
+<!-- ═══ BRIEFING LIGHTBOX ═══ -->
+<div id="briefing-lightbox" role="dialog" aria-modal="true" aria-label="Newsletter example" style="
+  display:none;
+  position:fixed;inset:0;
+  z-index:9999;
+  background:rgba(7,0,26,0.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+">
+  <button onclick="closeBriefingLightbox()" aria-label="Close" style="
+    position:absolute;top:20px;right:20px;
+    width:44px;height:44px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.07);
+    color:#fff;font-size:22px;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:background 0.2s;
+  " onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">✕</button>
+  <img src="The_Rewire_Edition_01_Briefing.png" alt="The Rewire — Edition 01 Newsletter"
+    style="max-width:100%;max-height:90vh;border-radius:16px;box-shadow:0 40px 120px rgba(0,0,0,0.8);object-fit:contain;" />
+</div>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
@@ -2304,6 +2330,24 @@
     submitBtn.textContent = 'Request Sent ✓';
     submitBtn.style.animation = 'none';
   }
+
+  // Briefing lightbox
+  function openBriefingLightbox(e) {
+    e && e.preventDefault();
+    const lb = document.getElementById('briefing-lightbox');
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBriefingLightbox() {
+    document.getElementById('briefing-lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('briefing-lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeBriefingLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBriefingLightbox();
+  });
 
   // Live email validation feedback
   (function () {
