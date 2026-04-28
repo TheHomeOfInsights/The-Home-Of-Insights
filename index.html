@@ -305,9 +305,9 @@
       height: 76px;
       width: auto;
       display: block;
-      filter: brightness(1.25)
-              drop-shadow(0 0 20px rgba(120,63,228,0.85))
-              drop-shadow(0 0 6px rgba(200,160,255,0.5));
+      border-radius: 14px;
+      filter: drop-shadow(0 0 18px rgba(120,63,228,0.7))
+              drop-shadow(0 0 6px rgba(180,130,255,0.4));
     }
     .nav-links {
       display: flex;
@@ -327,6 +327,56 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
     }
+
+    /* ─── MOBILE HAMBURGER ─── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px; height: 40px;
+      padding: 8px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--white);
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) { .nav-hamburger { display: flex; } }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 88px; left: 0; right: 0;
+      background: rgba(7,0,26,0.97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 8px 28px 24px;
+      z-index: 999;
+      flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block;
+      padding: 16px 0;
+      font-size: 17px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--white); }
 
     /* ═══════════════════════════════════════════
        HERO
@@ -1009,7 +1059,7 @@
       display: block;
       text-decoration: none;
     }
-    @media (max-width: 768px) { .gallery-item { flex: 0 0 300px; } }
+    @media (max-width: 768px) { .gallery-item { flex: 0 0 calc(100vw - 56px); } }
     .gallery-item img {
       position: absolute;
       inset: 0;
@@ -1198,54 +1248,7 @@
       flex-grow: 1;
     }
 
-    /* ═══════════════════════════════════════════
-       STATS
-    ═══════════════════════════════════════════ */
-    #stats {
-      padding: 80px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      background: linear-gradient(180deg, rgba(120,63,228,0.06) 0%, transparent 100%);
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-    @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
-
-    .stat-block {
-      text-align: center;
-      padding: 40px 20px;
-      border-right: 1px solid rgba(255,255,255,0.07);
-    }
-    .stat-block:last-child { border-right: none; }
-    @media (max-width: 768px) {
-      .stat-block:nth-child(2) { border-right: none; }
-      .stat-block { border-bottom: 1px solid rgba(255,255,255,0.07); }
-    }
-    .stat-val {
-      font-size: clamp(36px, 4vw, 56px);
-      font-weight: 900;
-      letter-spacing: -2px;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .stat-val.purple {
-      background: linear-gradient(135deg, var(--purple-light), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .stat-val.green {
-      background: linear-gradient(135deg, var(--green), var(--green-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .stat-desc { font-size: 13px; color: var(--neutral); font-weight: 500; }
-
-    /* ═══════════════════════════════════════════
+/* ═══════════════════════════════════════════
        PRICING
     ═══════════════════════════════════════════ */
     #pricing {
@@ -1500,7 +1503,7 @@
     }
     @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
 
-    .footer-brand img { height: 220px; width: auto; display: block; margin-bottom: 16px; }
+    .footer-brand img { height: 160px; width: auto; display: block; margin-bottom: 16px; border-radius: 18px; }
     .footer-brand p {
       font-size: 13.5px;
       color: var(--neutral);
@@ -1624,7 +1627,7 @@
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <img src="brand_assets/Logo New.jpg" alt="The Home of Insights" height="52" />
+      <img src="new%20logo%20(3).png" alt="The Home of Insights" height="52" />
     </a>
     <ul class="nav-links">
       <li><a href="#methodology">Services</a></li>
@@ -1633,9 +1636,22 @@
       <li><a href="#cta-section">Contact</a></li>
     </ul>
     <div class="nav-right">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#methodology">Services</a>
+  <a href="#deliverables">Examples</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#cta-section">Contact</a>
+</div>
 
 <main id="main-content">
 
@@ -1808,29 +1824,6 @@
   </div>
 </section>
 
-<!-- ═══ STATS ═══ -->
-<section id="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-block">
-        <div class="stat-val purple" data-count="500" data-suffix="+">500+</div>
-        <div class="stat-desc">Curated public sources</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-val green" data-count="5" data-suffix=" Day">5 Day</div>
-        <div class="stat-desc">Delivery turnaround</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-val purple" data-count="100" data-suffix="%">100%</div>
-        <div class="stat-desc">Publicly sourced intelligence</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-val green" data-count="3" data-suffix="">3</div>
-        <div class="stat-desc">Intelligence products</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══ DELIVERABLES PREVIEW ═══ -->
 <section id="deliverables">
@@ -1857,7 +1850,7 @@
 
       <!-- Card 1: Newsletter -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" loading="lazy" />
+        <img src="visual-aws-anthropic.png" alt="Market Intelligence Newsletter — AWS × Anthropic $100B Deal" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Newsletter</span>
@@ -1871,7 +1864,7 @@
 
       <!-- Card 2: Company Profiles -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" loading="lazy" />
+        <img src="visual-mckinsey-google.png" alt="Company Profiles — McKinsey × Google Cloud" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Company Profile</span>
@@ -1885,7 +1878,7 @@
 
       <!-- Card 3: Industry Reports -->
       <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" loading="lazy" />
+        <img src="visual-thoma-bravo-google.png" alt="Custom Industry Reports — Thoma Bravo × Google Cloud" loading="lazy" />
         <div class="gallery-item-overlay"></div>
         <div class="gallery-item-content">
           <span class="gallery-item-tag">Industry Report</span>
@@ -2007,13 +2000,13 @@
 
       <!-- Right: stacked mockup images -->
       <div class="mockup-images reveal d2">
-        <!-- Back card -->
+        <!-- Back card: sample intelligence carousel card -->
         <div class="mockup-card mockup-card-back">
-          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-1_4x.9cc114e6.png" alt="Newsletter preview back" loading="lazy" />
+          <img src="visual-stellantis-microsoft.png" alt="Intelligence briefing — Stellantis × Microsoft" loading="lazy" />
         </div>
-        <!-- Front card -->
+        <!-- Front card: actual newsletter briefing -->
         <div class="mockup-card mockup-card-front">
-          <img src="https://www.fey.com/marketing/_next/static/media/newsletter-desktop-2_4x.e594b737.png" alt="Newsletter preview front" loading="lazy" />
+          <img src="The_Rewire_Edition_01_Briefing.png" alt="The Rewire — Edition 01 newsletter briefing" loading="lazy" />
         </div>
       </div>
 
@@ -2107,7 +2100,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="brand_assets/Logo New.jpg" alt="The Home of Insights" />
+        <img src="new%20logo%20(3).png" alt="The Home of Insights" />
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -2209,6 +2202,29 @@
   }
   document.querySelectorAll('.nav-logo img, .footer-brand img').forEach(removeLogoBg);
 
+  // Mobile nav hamburger
+  (function () {
+    const hamburger  = document.getElementById('nav-hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (!hamburger || !mobileMenu) return;
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('click', e => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
+    });
+  })();
+
   // Products gallery carousel
   (function () {
     const track   = document.getElementById('gallery-track');
@@ -2232,6 +2248,21 @@
     if (nextBtn) nextBtn.addEventListener('click', () => { if (current < items.length - 1) { current++; update(); } });
     dots.forEach((dot, i) => dot.addEventListener('click', () => { current = i; update(); }));
     window.addEventListener('resize', update);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    const trackWrap = document.querySelector('.gallery-track-wrap');
+    if (trackWrap) {
+      trackWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      trackWrap.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 48) {
+          if (dx < 0 && current < items.length - 1) { current++; update(); }
+          else if (dx > 0 && current > 0) { current--; update(); }
+        }
+      }, { passive: true });
+    }
+
     update();
   })();
 
@@ -2243,35 +2274,7 @@
     });
   });
 
-  // Count-up animation for stats
-  (function () {
-    const statEls = document.querySelectorAll('.stat-val[data-count]');
-    if (!statEls.length) return;
-    const countObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1200;
-        const steps = 40;
-        const step = duration / steps;
-        let current = 0;
-        countObserver.unobserve(el);
-        const timer = setInterval(() => {
-          current += target / steps;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          el.textContent = Math.floor(current) + suffix;
-        }, step);
-      });
-    }, { threshold: 0.5 });
-    statEls.forEach(el => countObserver.observe(el));
-  })();
-
-  // Contact form: validation + disable on submit
+// Contact form: validation + disable on submit
   function handleContactSubmit(e) {
     e.preventDefault();
     const emailInput = document.getElementById('cf-email');
