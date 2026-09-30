@@ -1,0 +1,68 @@
+/* Shared styles for the Terms of Service and Privacy Policy pages */
+@font-face { font-family: 'Poppins'; font-weight: 400; font-display: swap; src: url(assets/fonts/poppins-400.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-weight: 500; font-display: swap; src: url(assets/fonts/poppins-500.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-weight: 600; font-display: swap; src: url(assets/fonts/poppins-600.woff2) format('woff2'); }
+@font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(assets/fonts/newsreader-var.woff2) format('woff2'); }
+@font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url(assets/fonts/newsreader-italic.woff2) format('woff2'); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #07001A; --violet: #783FE4; --violet-soft: #B08AF8;
+  --paper: #F4F3F9; --sheet: #FFFFFF;
+  --text: #17122B; --muted: #5C5673; --line: #DEDAEA;
+  --ui: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
+}
+body { background: var(--paper); color: var(--text); font-family: var(--ui); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--violet); text-underline-offset: 3px; }
+a:hover { color: #5A26C4; }
+:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+.legal-head { background: var(--ink); }
+.legal-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #F3F1FA; text-decoration: none; font-weight: 600; }
+.brand:hover { color: #fff; }
+.brand img { width: auto; height: 56px; filter: drop-shadow(0 0 10px rgba(120,63,228,0.45)); }
+.brand em { font-style: normal; color: var(--violet-soft); }
+.back { color: #A9A4BD; font-size: 0.875rem; text-decoration: none; }
+.back:hover { color: #fff; }
+
+.doc { padding-top: 56px; padding-bottom: 80px; }
+.doc h1 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+.meta { color: var(--muted); font-size: 0.875rem; margin-top: 10px; }
+.doc section { margin-top: 44px; scroll-margin-top: 24px; }
+.doc h2 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; }
+.doc p, .doc li { font-family: var(--serif); font-size: 1.0625rem; line-height: 1.7; }
+.doc p { margin-top: 12px; }
+.doc ul { margin-top: 12px; padding-left: 22px; }
+.doc li + li { margin-top: 6px; }
+.doc strong { font-family: var(--ui); font-weight: 600; font-size: 0.9375rem; }
+
+.toc { margin-top: 32px; padding: 20px 24px; background: var(--sheet); border: 1px solid var(--line); border-radius: 12px; }
+.toc ol { columns: 2; column-gap: 32px; padding-left: 20px; }
+.toc li { font-family: var(--ui); font-size: 0.875rem; line-height: 1.5; margin: 0 0 6px; break-inside: avoid; }
+.toc a { text-decoration: none; }
+@media (max-width: 560px) { .toc ol { columns: 1; } }
+
+table { width: 100%; border-collapse: collapse; margin-top: 16px; background: var(--sheet); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 0.9375rem; }
+th { text-align: left; font-weight: 600; font-size: 0.8125rem; background: #FAF9FD; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+td { padding: 12px 14px; vertical-align: top; font-family: var(--serif); font-size: 1rem; line-height: 1.55; border-top: 1px solid #EFEDF5; }
+@media (max-width: 640px) {
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  tr { padding: 12px 0; border-top: 1px solid var(--line); }
+  tr:first-child { border-top: 0; }
+  td { border: 0; padding: 4px 14px; }
+  td:first-child { font-family: var(--ui); font-weight: 600; font-size: 0.9375rem; }
+}
+
+.form-box { margin-top: 16px; padding: 20px 24px; background: var(--sheet); border: 1px dashed var(--line); border-radius: 12px; }
+.form-box p:first-child { margin-top: 0; }
+
+.legal-foot { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 0.875rem; color: var(--muted); }
+.legal-foot .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.legal-foot a { margin-left: 16px; color: var(--muted); text-decoration: none; }
+.legal-foot a:first-child { margin-left: 0; }
+.legal-foot a:hover { color: var(--violet); }

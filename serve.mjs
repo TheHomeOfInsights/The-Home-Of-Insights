@@ -19,10 +19,15 @@ const MIME = {
   '.woff2':'font/woff2',
   '.woff': 'font/woff',
   '.json': 'application/json',
+  '.xml':  'application/xml',
+  '.txt':  'text/plain',
+  '.pdf':  'application/pdf',
+  '.mp4':  'video/mp4',
 };
 
 http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
+  const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  let filePath = path.join(__dirname, pathname === '/' ? 'index.html' : pathname);
   const ext = path.extname(filePath).toLowerCase();
   const contentType = MIME[ext] || 'application/octet-stream';
 
@@ -32,7 +37,7 @@ http.createServer((req, res) => {
       res.end('Not found');
       return;
     }
-    res.writeHead(200, { 'Content-Type': contentType });
+    res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'no-store' }); // local dev: always serve the latest files
     res.end(data);
   });
 }).listen(PORT, () => {

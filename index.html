@@ -3,31 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Home of Insights — Market & Competitive Intelligence</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- SEO: core meta -->
-  <meta name="description" content="The Home of Insights delivers market & competitive intelligence for executives. Weekly briefings, company profiles, and custom industry reports — starting free." />
+  <title>Insight Out by The Home of Insights | Know Your Market Inside Out</title>
+  <meta name="description" content="Insight Out: a monthly intelligence brief on emerging trends, competitors' moves, new operating models and developments in technology and AI. Every news item comes with a clear insight and a direct link to its source." />
   <link rel="canonical" href="https://thehomeofinsights.com/" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="theme-color" content="#07001A" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/logo-mark.png" />
 
-  <!-- SEO: Open Graph (LinkedIn / Facebook) -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="The Home of Insights — Market & Competitive Intelligence" />
-  <meta property="og:description" content="Actionable market intelligence for executives. Weekly briefings, company profiles, and custom industry reports — delivered in 5 days." />
+  <meta property="og:title"       content="Insight Out by The Home of Insights | Know Your Market Inside Out" />
+  <meta property="og:description" content="Cut through the noise. Turn information into actionable insights, with a monthly intelligence brief built from reliable, carefully selected sources." />
   <meta property="og:url"         content="https://thehomeofinsights.com/" />
   <!-- TODO: Replace og:image with a 1200×630 social preview image before publishing -->
   <meta property="og:image"       content="https://thehomeofinsights.com/brand_assets/Logo%20New.jpg" />
-
-  <!-- SEO: Twitter / X Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="The Home of Insights — Market & Competitive Intelligence" />
-  <meta name="twitter:description" content="Actionable market intelligence for executives. Weekly briefings, company profiles, and custom industry reports." />
+  <meta name="twitter:title"       content="Insight Out by The Home of Insights | Know Your Market Inside Out" />
+  <meta name="twitter:description" content="Cut through the noise. Turn information into actionable insights." />
   <meta name="twitter:image"       content="https://thehomeofinsights.com/brand_assets/Logo%20New.jpg" />
 
-  <!-- SEO: JSON-LD structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,2344 +31,1306 @@
         "name": "The Home of Insights",
         "url": "https://thehomeofinsights.com",
         "logo": "https://thehomeofinsights.com/brand_assets/Logo%20New.jpg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "hello@thehomeofinsights.com",
-          "contactType": "customer service"
-        }
+        "founder": { "@type": "Person", "name": "Mariusz Wnuk", "sameAs": "https://www.linkedin.com/in/mariusz-wnuk/" },
+        "contactPoint": { "@type": "ContactPoint", "email": "mariusz@thehomeofinsights.com", "contactType": "customer service" }
       },
       {
-        "@type": "ItemList",
-        "name": "Intelligence Services",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Service",
-              "name": "Market Intelligence Newsletter",
-              "description": "Curated strategic briefings delivered weekly, monthly, or daily — market trends, competitive signals, and sector analysis for busy leaders.",
-              "offers": { "@type": "Offer", "price": "99", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "99", "priceCurrency": "USD", "unitText": "per month" } }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Service",
-              "name": "Company Profiles",
-              "description": "In-depth competitive intelligence on any company — financials, vulnerabilities, and recent developments before your critical meeting.",
-              "offers": { "@type": "Offer", "price": "399", "priceCurrency": "USD" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Service",
-              "name": "Custom Industry Reports",
-              "description": "Comprehensive market analysis with strategic recommendations — custom scope, competitive driver mapping, executive-ready format.",
-              "offers": { "@type": "Offer", "price": "1499", "priceCurrency": "USD" }
-            }
-          }
+        "@type": "Service",
+        "name": "Insight Out",
+        "slogan": "Know your market inside out.",
+        "serviceType": "Intelligence brief subscription",
+        "provider": { "@type": "Organization", "name": "The Home of Insights" },
+        "description": "A monthly intelligence brief on emerging trends, competitors' moves, new operating models and developments in technology and AI. Catalogue, bespoke or company branded.",
+        "offers": [
+          { "@type": "Offer", "name": "Free sample", "price": "0", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Catalogue brief", "price": "99", "priceCurrency": "USD",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "99", "priceCurrency": "USD", "unitText": "MONTH" } },
+          { "@type": "Offer", "name": "Bespoke brief", "price": "99", "priceCurrency": "USD", "description": "Plus a one-time setup fee of $299." },
+          { "@type": "Offer", "name": "Company branded brief", "price": "99", "priceCurrency": "USD", "description": "Plus a one-time setup fee of $499." }
         ]
       }
     ]
   }
   </script>
 
-  <!-- Performance: preload hero video -->
-  <link rel="preload" as="fetch" href="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" crossorigin />
+  <link rel="preload" href="assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin />
 
   <style>
+    /* ─── Fonts (self-hosted: no visitor data sent to third parties) ─── */
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/poppins-400.woff2) format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url(assets/fonts/poppins-500.woff2) format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(assets/fonts/poppins-600.woff2) format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/poppins-700.woff2) format('woff2'); }
+    @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 800; font-display: swap; src: url(assets/fonts/poppins-800.woff2) format('woff2'); }
+    @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(assets/fonts/newsreader-var.woff2) format('woff2'); }
+    @font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url(assets/fonts/newsreader-italic.woff2) format('woff2'); }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    [hidden] { display: none !important; }
 
     :root {
+      /* Palette of thehomeofinsights.com (unchanged) */
       --black:        #07001A;
       --purple:       #783FE4;
       --purple-hover: #8F58F0;
       --purple-light: #B08AF8;
       --purple-100:   #E3DBFF;
-      --purple-glow:  rgba(120,63,228,0.38);
       --green:        #3DFDA0;
-      --green-light:  #8DFDC8;
       --white:        #FFFFFF;
       --neutral:      #9895A8;
-      --neutral-dark: #2E2B3A;
       --surface:      rgba(255,255,255,0.035);
       --border:       rgba(255,255,255,0.08);
+
+      /* Derived from the palette */
+      --text:         rgba(255,255,255,0.92);
+      --text-soft:    rgba(255,255,255,0.74);
+      --border-2:     rgba(255,255,255,0.12);
+      --band:         #0B0322;
+      --error:        #FF8A9B;
+      --paper:        #F4F3F9;
+      --ink:          #17122B;
+
+      --ui:    'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+
+      --space-1: 8px;  --space-2: 16px; --space-3: 24px; --space-4: 32px;
+      --space-5: 48px; --space-6: 64px; --space-7: 96px; --space-8: 128px;
+      --radius-control: 10px;
+      --radius-card: 24px;
+      --shadow-float: 0 2px 6px rgba(7,0,26,0.3), 0 24px 64px -16px rgba(40,10,110,0.55);
+      --spring: cubic-bezier(.22,.84,.44,1);
     }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { background: var(--black); color: var(--white); font-family: var(--ui); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--black); }
     ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+    a { color: inherit; }
+    img, video { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    h2 { text-wrap: balance; }
 
     .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    @media (max-width: 600px) { .container { padding: 0 20px; } }
+    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 2000; background: var(--purple); color: #fff; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .skip-link:focus { top: 16px; }
+    :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 6px; }
 
-    a { color: inherit; text-decoration: none; }
-
-    /* ─── BUTTONS ─── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 600;
-      border-radius: 100px;
-      padding: 13px 28px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.25s ease;
-      letter-spacing: 0.2px;
-    }
+    /* ─── Buttons (as on the live site) ─── */
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: var(--ui); font-size: 15px; font-weight: 600; letter-spacing: 0.2px; border-radius: 100px; padding: 13px 28px; min-height: 48px; border: 1.5px solid transparent; cursor: pointer; text-decoration: none; text-align: center; transition: transform 0.25s var(--spring), background-color 0.2s, border-color 0.2s, box-shadow 0.25s, opacity 0.2s; }
+    .btn:active { transform: translateY(1px) scale(0.99); }
     @keyframes glow-pulse {
       0%, 100% { box-shadow: 0 4px 24px rgba(120,63,228,0.5), 0 0 48px rgba(120,63,228,0.2); }
       50%       { box-shadow: 0 4px 32px rgba(120,63,228,0.75), 0 0 64px rgba(120,63,228,0.35); }
     }
-    .btn-primary {
-      background: var(--purple);
-      color: var(--white);
-      animation: glow-pulse 2.8s ease-in-out infinite;
-    }
-    .btn-primary:hover {
-      background: var(--purple-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 36px rgba(120,63,228,0.75), 0 0 72px rgba(120,63,228,0.4);
-      animation: none;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.22);
-    }
-    .btn-outline:hover {
-      border-color: rgba(255,255,255,0.48);
-      background: rgba(255,255,255,0.055);
-    }
-    .btn-green {
-      background: var(--green);
-      color: var(--black);
-      font-weight: 700;
-      box-shadow: 0 4px 24px rgba(61,253,160,0.32);
-    }
-    .btn-green:hover {
-      background: var(--green-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 36px rgba(61,253,160,0.48);
-    }
+    .btn-primary { background: var(--purple); color: var(--white); box-shadow: 0 4px 24px rgba(120,63,228,0.5), 0 0 48px rgba(120,63,228,0.2); }
+    .btn-primary:hover { background: var(--purple-hover); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(120,63,228,0.75), 0 0 72px rgba(120,63,228,0.4); animation: none; }
+    .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.22); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.48); background: rgba(255,255,255,0.055); }
+    .btn-green { background: transparent; color: var(--white); border-color: rgba(61,253,160,0.5); }
+    .btn-green:hover { border-color: var(--green); background: rgba(61,253,160,0.08); }
+    .btn[disabled], .btn[aria-busy="true"] { opacity: 0.6; cursor: progress; transform: none; animation: none; }
+    /* The flashing "Send Message" effect from the live site, on every order and send button */
+    .btn-flash { width: 100%; font-weight: 700; animation: glow-pulse 2.8s ease-in-out infinite; }
+    .hero .btn-primary { animation: glow-pulse 2.8s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .btn-flash, .hero .btn-primary { animation: none; } }
 
-    /* ─── REVEAL ─── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.7s cubic-bezier(.22,.84,.44,1), transform 0.7s cubic-bezier(.22,.84,.44,1);
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .d1 { transition-delay: 0.08s; }
-    .d2 { transition-delay: 0.16s; }
-    .d3 { transition-delay: 0.24s; }
-    .d4 { transition-delay: 0.32s; }
-
-    /* ═══════════════════════════════════════════
-       NEWSLETTER MOCKUP
-    ═══════════════════════════════════════════ */
-    #newsletter-mockup {
-      padding: 96px 0 100px;
-      position: relative;
-      overflow: hidden;
-    }
-    .mockup-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .mockup-text {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .mockup-title {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--white);
-    }
-    .mockup-desc {
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--neutral);
-      max-width: 460px;
-    }
-
-    /* Stacked image cards */
-    .mockup-images {
-      position: relative;
-      height: 420px;
-    }
-    .mockup-card {
-      position: absolute;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.55);
-    }
-    .mockup-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .mockup-card-back {
-      width: 78%;
-      height: 340px;
-      top: 40px;
-      left: -4%;
-      background: var(--neutral-dark);
-      border: 1px solid var(--border);
-      transform: rotate(-2deg);
-      z-index: 1;
-      opacity: 0.85;
-    }
-    .mockup-card-front {
-      width: 82%;
-      height: 360px;
-      top: 20px;
-      right: -4%;
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.12);
-      transform: rotate(1.5deg);
-      z-index: 2;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .mockup-card-front:hover {
-      transform: rotate(0deg) translateY(-6px);
-      box-shadow: 0 36px 80px rgba(120,63,228,0.3);
-    }
-    .mockup-divider {
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 100%; height: 1px;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 100%);
-    }
-    @media (max-width: 768px) {
-      .mockup-grid { grid-template-columns: 1fr; gap: 48px; }
-      .mockup-images { height: 320px; }
-      .mockup-card-back { height: 260px; }
-      .mockup-card-front { height: 280px; }
-    }
-
-    /* ═══════════════════════════════════════════
-       NAVIGATION
-    ═══════════════════════════════════════════ */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 0 28px;
-      transition: background 0.3s, backdrop-filter 0.3s;
-    }
-    nav.scrolled {
-      background: rgba(7,0,26,0.92);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .nav-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 88px;
-    }
-    .nav-logo { display: flex; align-items: center; }
+    /* ═══ NAV (as on the live site) ═══ */
+    .site-nav { position: fixed; inset: 0 0 auto 0; z-index: 1000; padding: 0 28px; transition: background-color 0.3s; border-bottom: 1px solid transparent; }
+    .site-nav.scrolled { background: rgba(7,0,26,0.92); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-bottom-color: rgba(255,255,255,0.06); }
+    .nav-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 88px; gap: var(--space-3); }
+    .nav-logo { display: flex; align-items: center; flex: none; }
     .nav-logo:hover { opacity: 0.9; }
-    .nav-logo img {
-      height: 76px;
-      width: auto;
-      display: block;
-      border-radius: 14px;
-      filter: drop-shadow(0 0 18px rgba(120,63,228,0.7))
-              drop-shadow(0 0 6px rgba(180,130,255,0.4));
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--neutral);
-      transition: color 0.2s;
-    }
+    .nav-logo img, .footer-logo img { height: 72px; width: auto; filter: drop-shadow(0 0 14px rgba(120,63,228,0.45)); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--neutral); text-decoration: none; transition: color 0.2s; padding: 6px 0; }
     .nav-links a:hover { color: var(--white); }
-    .nav-right { display: flex; align-items: center; gap: 14px; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-    }
-
-    /* ─── MOBILE HAMBURGER ─── */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 40px; height: 40px;
-      padding: 8px;
-      cursor: pointer;
-      border: none;
-      background: none;
-      color: var(--white);
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px; height: 2px;
-      background: currentColor;
-      border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 768px) { .nav-hamburger { display: flex; } }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 88px; left: 0; right: 0;
-      background: rgba(7,0,26,0.97);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 8px 28px 24px;
-      z-index: 999;
-      flex-direction: column;
-    }
+    .nav-spacer { width: 76px; flex: none; }
+    .nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+    .nav-toggle span { width: 22px; height: 2px; border-radius: 2px; background: var(--white); transition: transform 0.25s var(--spring), opacity 0.2s; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { position: fixed; top: 88px; left: 0; right: 0; z-index: 999; background: rgba(7,0,26,0.97); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 8px 28px 24px; display: none; flex-direction: column; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      display: block;
-      padding: 16px 0;
-      font-size: 17px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.78);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      transition: color 0.2s;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a { display: block; padding: 16px 0; font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.78); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mobile-menu a:last-child { border-bottom: 0; }
     .mobile-menu a:hover { color: var(--white); }
-
-    /* ═══════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════ */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 76px;
-      position: relative;
-      overflow: hidden;
-      transition: min-height 0.5s ease;
+    @media (max-width: 860px) {
+      .nav-links, .nav-spacer { display: none; }
+      .nav-toggle { display: flex; }
+      .site-nav { padding: 0 16px; }
     }
 
-    #hero.fit-content {
-      min-height: 0;
-      padding-top: calc(76px + 80px);
-      padding-bottom: 80px;
-    }
-
-    /* Video background */
-    .hero-video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    /* Dark overlay so text stays legible over the video */
-    .hero-video-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(7, 0, 26, 0.62);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* Gradient fade at the bottom so hero bleeds into the next section */
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 220px;
-      background: linear-gradient(to bottom, transparent 0%, var(--black) 100%);
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    /* Toggle button (replaces React state) */
-    .hero-toggle {
-      position: absolute;
-      top: calc(76px + 12px);
-      right: 16px;
-      z-index: 20;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(85, 80, 110, 0.4);
-      border: 1px solid rgba(164, 132, 215, 0.5);
-      color: var(--white);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .hero-toggle:hover { background: rgba(85, 80, 110, 0.65); }
+    /* ═══ HERO (as on the live site) ═══ */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 76px; position: relative; overflow: hidden; transition: min-height 0.5s ease; }
+    .hero.fit-content { min-height: 0; padding-top: calc(76px + 80px); padding-bottom: 80px; }
+    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .hero-video-overlay { position: absolute; inset: 0; background: rgba(7,0,26,0.62); z-index: 1; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 220px; background: linear-gradient(to bottom, transparent 0%, var(--black) 100%); z-index: 2; pointer-events: none; }
+    .hero-toggle { position: absolute; top: calc(76px + 12px); right: 16px; z-index: 20; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); background: rgba(85,80,110,0.4); border: 1px solid rgba(164,132,215,0.5); color: var(--white); cursor: pointer; transition: background-color 0.2s; }
+    .hero-toggle:hover { background: rgba(85,80,110,0.65); }
     .hero-toggle svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .hero-glow-1 { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(120,63,228,0.2) 0%, transparent 65%); top: -120px; left: -180px; pointer-events: none; z-index: 2; }
+    .hero-glow-2 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(61,253,160,0.07) 0%, transparent 65%); bottom: -60px; right: 8%; pointer-events: none; z-index: 2; }
+    .hero-grid { position: absolute; inset: 0; pointer-events: none; z-index: 2; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 36px 36px; -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%); mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%); }
+    .hero > .container { position: relative; z-index: 3; width: 100%; }
+    .hero-content { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 0 120px; max-width: 860px; margin: 0 auto; }
+    .hero h1 { font-size: clamp(42px, 6vw, 76px); font-weight: 800; line-height: 1.08; letter-spacing: -2px; margin-bottom: 28px; text-shadow: 0 2px 32px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5); }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.88); line-height: 1.75; max-width: 640px; margin-bottom: 36px; text-shadow: 0 1px 16px rgba(0,0,0,0.65); }
+    .hero-cta { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+    @media (max-width: 480px) { .hero-cta { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; } .hero-cta .btn { width: 100%; } }
+    .load-in { opacity: 0; transform: translateY(26px); animation: load-in 0.8s var(--spring) forwards; }
+    .load-in.l2 { animation-delay: 0.12s; } .load-in.l3 { animation-delay: 0.24s; } .load-in.l4 { animation-delay: 0.36s; }
+    @keyframes load-in { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .load-in { opacity: 1; transform: none; animation: none; } }
 
-    .hero-glow-1 {
-      position: absolute;
-      width: 700px; height: 700px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(120,63,228,0.2) 0%, transparent 65%);
-      top: -120px; left: -180px;
-      pointer-events: none;
-      z-index: 2;
-    }
-    .hero-glow-2 {
-      position: absolute;
-      width: 500px; height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(61,253,160,0.07) 0%, transparent 65%);
-      bottom: -60px; right: 8%;
-      pointer-events: none;
-      z-index: 2;
-    }
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
-      background-size: 36px 36px;
-      pointer-events: none;
-      mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
-      z-index: 2;
-    }
+    /* ═══ SECTIONS ═══ */
+    .section { padding: var(--space-8) 0; position: relative; }
+    .section.band { background: var(--band); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    @media (max-width: 700px) { .section { padding: var(--space-7) 0; } }
+    .section-head { max-width: 46rem; }
+    .section-head.center { margin: 0 auto; text-align: center; }
+    .section-head h2, .h2 { font-size: clamp(2rem, 3.6vw, 2.875rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.03em; }
+    .lead { font-family: var(--serif); font-size: clamp(1.125rem, 1.5vw, 1.25rem); line-height: 1.6; color: var(--text-soft); margin-top: var(--space-2); }
 
-    .hero-inner {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 0 120px;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .hero-visual { display: none; }
+    /* ─── Problem ─── */
+    .problem-intro { max-width: 760px; margin: 0 auto; text-align: center; }
+    .problem-intro .lead { margin-top: var(--space-3); }
+    .flow-section .flow { margin-top: 0; }
+    .gap-line { display: inline-block; margin-top: var(--space-4); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 6px; background: linear-gradient(var(--green), var(--green)) left bottom / 100% 3px no-repeat; }
 
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(120,63,228,0.14);
-      border: 1px solid rgba(120,63,228,0.32);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--purple-light);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 26px;
-    }
-    .hero-tag::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.75); }
-    }
+    .flow { margin-top: var(--space-7); border-radius: var(--radius-card); border: 1px solid var(--border); background: radial-gradient(60% 70% at 30% 40%, rgba(120,63,228,0.12), transparent 70%), var(--surface); padding: var(--space-5) var(--space-5) var(--space-4); }
+    @media (max-width: 700px) { .flow { padding: var(--space-4) 16px var(--space-3); margin-top: var(--space-6); } }
+    .flow-title { text-align: center; max-width: 40rem; margin: 0 auto; font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.45; }
+    .flow-title span { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.0625rem; color: var(--text-soft); margin-top: 4px; }
+    .flow-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) 96px minmax(0, 1fr); align-items: center; margin-top: var(--space-5); gap: 0; }
+    @media (max-width: 960px) { .flow-grid { grid-template-columns: 1fr; gap: var(--space-3); } }
 
-    .hero-content h1 {
-      font-size: clamp(42px, 6vw, 76px);
-      font-weight: 800;
-      line-height: 1.08;
-      letter-spacing: -2px;
-      margin-bottom: 28px;
-      text-shadow: 0 2px 32px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5);
-    }
-    .hero-content h1 .highlight {
-      color: var(--white);
-      -webkit-text-fill-color: var(--white);
-    }
+    .cloud { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 20px; isolation: isolate; }
+    @media (max-width: 700px) { .cloud { gap: 10px 14px; } }
+    .cloud li { position: relative; color: rgba(255,255,255,0.62); line-height: 1.3; text-align: center; transition: opacity 0.9s var(--spring), color 0.9s; }
+    .cloud .s1 { font-size: 0.75rem; font-weight: 400; }
+    .cloud .s2 { font-size: 0.875rem; font-weight: 500; }
+    .cloud .s3 { font-size: 1rem; font-weight: 500; }
+    .cloud .s4 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
+    @media (max-width: 700px) { .cloud .m-hide { display: none; } .cloud .s4 { font-size: 1.0625rem; } }
+    .cloud .sig { padding: 7px 14px 7px 36px; }
+    .cloud .sig::before { content: ''; position: absolute; inset: 0; border-radius: 999px; z-index: -1; background: rgba(120,63,228,0.3); border: 1px solid rgba(176,138,248,0.75); box-shadow: 0 0 24px rgba(120,63,228,0.5), inset 0 1px 0 rgba(255,255,255,0.12); opacity: 0; transform: scale(0.94); transition: opacity 0.7s var(--spring), transform 0.7s var(--spring); transition-delay: var(--d, 0s); }
+    .cloud .sig .tick { position: absolute; left: 11px; top: 50%; width: 17px; height: 17px; margin-top: -8.5px; border-radius: 50%; background: var(--green); color: var(--black); display: grid; place-items: center; opacity: 0; transform: scale(0.4); transition: opacity 0.5s var(--spring), transform 0.5s var(--spring); transition-delay: calc(var(--d, 0s) + 0.2s); }
+    .cloud .sig .tick svg { width: 10px; height: 10px; }
+    .flow.filtered .cloud li:not(.sig) { opacity: 0.26; }
+    .flow.filtered .cloud .sig { color: var(--white); }
+    .flow.filtered .cloud .sig::before, .flow.filtered .cloud .sig .tick { opacity: 1; transform: none; }
 
-    .hero-sub {
-      font-size: 18px;
-      color: rgba(255,255,255,0.88);
-      line-height: 1.75;
-      max-width: 640px;
-      margin-bottom: 36px;
-      font-weight: 400;
-      text-shadow: 0 1px 16px rgba(0,0,0,0.65);
-    }
+    .flow-arrow { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--purple-light); }
+    .flow-arrow svg { width: 44px; height: 44px; }
+    .flow-arrow span { font-size: 0.6875rem; font-weight: 600; color: var(--neutral); text-align: center; line-height: 1.35; max-width: 80px; }
+    @media (max-width: 960px) { .flow-arrow { flex-direction: row; justify-content: center; } .flow-arrow svg { transform: rotate(90deg); width: 36px; height: 36px; } .flow-arrow span { max-width: none; } }
 
-    .hero-content {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+    /* The resulting brief, shown as a real document */
+    .report { background: var(--paper); color: var(--ink); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -24px rgba(0,0,0,0.7), 0 0 0 1px rgba(176,138,248,0.35), 0 0 60px -10px rgba(120,63,228,0.45); }
+    @media (max-width: 960px) { .report { transform: none; max-width: 460px; margin: 0 auto; width: 100%; } }
+    /* Mini version of the edition masthead (same layout as the Insight Out files) */
+    .report-head { color: #fff; padding: 16px 18px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: radial-gradient(120% 140% at 88% -20%, rgba(120,63,228,0.38) 0%, rgba(120,63,228,0) 55%), radial-gradient(90% 120% at -10% 120%, rgba(61,253,160,0.07) 0%, rgba(61,253,160,0) 50%), var(--black); }
+    .report-head .rh-text { min-width: 0; }
+    .rh-month { display: inline-flex; align-items: center; gap: 6px; font-size: 0.6875rem; font-weight: 500; color: var(--purple-light); }
+    .rh-month::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px rgba(61,253,160,0.8); }
+    .report-head strong { display: block; margin-top: 4px; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    .rh-dek { font-family: var(--serif); font-style: italic; font-size: 0.875rem; color: #C9C4DA; margin-top: 2px; }
+    .report-head small { display: block; margin-top: 8px; font-size: 0.75rem; font-weight: 600; color: var(--purple-light); line-height: 1.3; }
+    .report-head img { flex: none; width: 92px; height: auto; filter: drop-shadow(0 0 10px rgba(120,63,228,0.4)); }
+    .report-body { padding: 14px 16px 16px; }
+    .r-item { background: #fff; border: 1px solid #DEDAEA; border-radius: 8px; padding: 10px 12px; }
+    .r-item + .r-item { margin-top: 10px; }
+    .r-theme { display: inline-block; font-size: 0.625rem; font-weight: 600; color: #fff; background: var(--purple); border-radius: 4px; padding: 2px 7px; }
+    .r-theme.t2 { background: #3B2A6E; }
+    .r-theme.t3 { background: #5B3FB0; }
+    .r-title { font-size: 0.8125rem; font-weight: 600; line-height: 1.35; margin-top: 6px; }
+    .r-label { font-size: 0.625rem; font-weight: 600; color: #5C5673; margin-top: 7px; }
+    .r-why { margin-top: 6px; padding: 6px 8px; border-left: 3px solid var(--purple); background: #F6F2FF; border-radius: 0 6px 6px 0; }
+    .r-why .r-label { margin: 0 0 4px; color: var(--purple); }
+    .bar { height: 6px; border-radius: 3px; background: #E4E0EE; }
+    .bar + .bar { margin-top: 5px; }
+    .r-why .bar { background: #DCD0FA; }
+    .r-text { font-family: var(--serif); font-size: 0.8125rem; line-height: 1.45; color: #3F3A55; margin-top: 4px; }
+    .r-why .r-text { margin-top: 0; color: var(--ink); }
+    .r-src { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; font-size: 0.625rem; font-weight: 600; color: var(--purple); border: 1px solid rgba(120,63,228,0.35); border-radius: 4px; padding: 2px 7px; }
+    .r-src svg { width: 9px; height: 9px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .report .r-item { opacity: 0; transform: translateY(10px); transition: opacity 0.6s var(--spring), transform 0.6s var(--spring); transition-delay: var(--d, 0s); }
+    .flow.filtered .report .r-item { opacity: 1; transform: none; }
+    .flow-note { text-align: center; margin-top: var(--space-4); font-size: 0.75rem; color: var(--neutral); }
+    @media (prefers-reduced-motion: reduce) { .cloud li, .cloud .sig::before, .cloud .sig .tick, .report .r-item { transition: none; } }
 
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
+    /* ─── The brief (what it is + structure) ─── */
+    .brief-name { text-align: center; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; }
+    .brief-slogan { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.375rem, 2.4vw, 1.875rem); letter-spacing: -0.01em; color: var(--text); margin-top: 14px; }
+    .brief-kind { display: block; font-size: 0.9375rem; font-weight: 500; color: var(--purple-light); letter-spacing: 0; margin-top: 12px; }
+    .brief-top { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); align-items: start; margin-top: var(--space-6); }
+    @media (max-width: 960px) { .brief-top { grid-template-columns: 1fr; gap: var(--space-5); margin-top: var(--space-5); } }
+    .brief-copy { font-family: var(--serif); font-size: clamp(1.1875rem, 1.6vw, 1.375rem); line-height: 1.6; color: var(--text); margin-top: 28px; }
+    .focus-title + .brief-copy { margin-top: 0; }
+    .brief-copy + .brief-copy { margin-top: var(--space-2); color: var(--text-soft); }
+    .focus-title { font-size: 0.8125rem; font-weight: 600; color: var(--neutral); margin-bottom: var(--space-2); }
+    .focus { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 480px) { .focus { grid-template-columns: 1fr; } }
+    .focus li { padding: 18px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
+    .focus svg { width: 26px; height: 26px; color: var(--purple-light); stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .focus h3 { font-size: 1rem; font-weight: 600; margin-top: 12px; letter-spacing: -0.01em; }
+    .focus p { font-family: var(--serif); font-size: 0.9375rem; line-height: 1.5; color: var(--text-soft); margin-top: 4px; }
+    @media (max-width: 480px) { .focus li { display: grid; grid-template-columns: 26px 1fr; column-gap: 14px; } .focus svg { grid-row: span 2; } .focus h3 { margin-top: 0; } }
 
-    .hero-note {
-      font-size: 12.5px;
-      color: var(--neutral);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      text-align: center;
-    }
-    .hero-note::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 700;
-    }
+    .brief-structure { display: grid; grid-template-columns: 5fr 6fr; gap: var(--space-7); align-items: center; margin-top: var(--space-7); padding-top: var(--space-7); border-top: 1px solid var(--border); }
+    @media (max-width: 960px) { .brief-structure { grid-template-columns: 1fr; gap: var(--space-5); margin-top: var(--space-6); padding-top: var(--space-6); } }
+    .parts { list-style: none; margin-top: var(--space-4); }
+    .parts li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; }
+    .parts li + li { margin-top: var(--space-3); }
+    .parts .icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(120,63,228,0.16); border: 1px solid rgba(176,138,248,0.35); color: var(--purple-light); }
+    .parts .icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .parts strong { display: block; font-size: 1.0625rem; font-weight: 600; }
+    .parts span { display: block; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.55; color: var(--text-soft); margin-top: 2px; }
+    .parts .is-trust .icon { background: rgba(61,253,160,0.1); border-color: rgba(61,253,160,0.4); color: var(--green); }
+    .stack { position: relative; padding: 0 0 28px 0; }
+    .stack::before, .stack::after { content: ''; position: absolute; left: 24px; right: 24px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); }
+    .stack::before { bottom: 0; height: 60px; left: 48px; right: 48px; }
+    .stack::after { bottom: 14px; height: 60px; }
+    .item-card { position: relative; z-index: 1; border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, #150A38, #0E0528); border: 1px solid rgba(176,138,248,0.3); box-shadow: var(--shadow-float); }
+    .item-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 22px; border-bottom: 1px solid var(--border); }
+    .item-org { font-size: 0.875rem; font-weight: 600; color: var(--purple-light); }
+    .item-date { font-size: 0.75rem; color: var(--neutral); }
+    .item-theme { font-size: 0.75rem; font-weight: 500; color: var(--white); background: var(--purple); border-radius: 6px; padding: 3px 10px; }
+    .item-body { padding: 20px 22px 22px; }
+    .item-headline { font-size: 1.1875rem; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .item-label { font-size: 0.8125rem; font-weight: 600; color: var(--white); display: flex; align-items: center; gap: 8px; }
+    .item-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--purple-light); }
+    .item-text { font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65; color: var(--text-soft); margin-top: 6px; }
+    .item-why { margin-top: 18px; padding: 14px 16px; border-radius: 10px; background: rgba(61,253,160,0.06); border-left: 3px solid var(--green); }
+    .item-why .item-label::before { background: var(--green); }
+    .item-source { margin-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8125rem; font-weight: 600; color: var(--purple-light); border: 1.5px solid rgba(176,138,248,0.4); border-radius: 8px; padding: 8px 14px; }
+    .item-source svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-    /* ─── Intelligence Brief Mockup ─── */
-    .hero-visual {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .brief-container {
-      position: relative;
-      width: 100%;
-      max-width: 500px;
-    }
-    .brief-badge {
-      position: absolute;
-      top: -16px; right: -10px;
-      background: var(--green);
-      color: var(--black);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 8px 16px;
-      border-radius: 100px;
-      box-shadow: 0 8px 24px rgba(61,253,160,0.38);
-      animation: badge-float 3.2s ease-in-out infinite;
-      white-space: nowrap;
-      z-index: 3;
-    }
-    @keyframes badge-float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-9px); }
-    }
-    .brief-window {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-    }
-    .brief-header {
-      background: rgba(120,63,228,0.12);
-      border-bottom: 1px solid rgba(120,63,228,0.2);
-      padding: 18px 22px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .brief-dot {
-      width: 9px; height: 9px;
-      border-radius: 50%;
-      background: var(--purple);
-      box-shadow: 0 0 10px var(--purple-glow);
-      animation: pulse 2.2s ease-in-out infinite;
-    }
-    .brief-header-text {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0.02em;
-    }
-    .brief-header-sub {
-      font-size: 11px;
-      color: var(--purple-light);
-      margin-left: auto;
-      font-weight: 500;
-    }
-    .brief-body { padding: 22px; }
-    .brief-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px;
-      margin-bottom: 10px;
-      transition: border-color 0.2s;
-    }
-    .brief-item:last-of-type { margin-bottom: 18px; }
-    .brief-item:hover { border-color: rgba(120,63,228,0.3); }
-    .brief-emoji {
-      font-size: 18px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .brief-item-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 3px;
-    }
-    .brief-item-desc {
-      font-size: 11.5px;
-      color: var(--neutral);
-      line-height: 1.5;
-    }
-    .brief-sources {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .brief-sources-label {
-      font-size: 10.5px;
-      color: var(--neutral);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-right: 2px;
-    }
-    .source-tag {
-      font-size: 10.5px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 100px;
-      background: rgba(120,63,228,0.14);
-      border: 1px solid rgba(120,63,228,0.28);
-      color: var(--purple-light);
-    }
-
-    /* ═══════════════════════════════════════════
-       FEATURES
-    ═══════════════════════════════════════════ */
-    #features {
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .section-tag {
-      display: inline-block;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--purple-light);
-      margin-bottom: 16px;
-    }
-    .section-title {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      font-size: 16.5px;
-      color: var(--neutral);
-      max-width: 560px;
-      line-height: 1.7;
-      font-weight: 400;
-    }
-    .section-header { max-width: 660px; margin-bottom: 64px; }
-
-    /* Shader cards grid */
-    .shader-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    @media (max-width: 900px)  { .shader-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 1100px) and (min-width: 901px) { .shader-grid { grid-template-columns: 1fr 1fr; } }
-
-    .shader-card {
-      position: relative;
-      height: 320px;
-      border-radius: 24px;
-      overflow: hidden;
-    }
-
-    /* Animated gradient background */
-    .sc-glow {
-      position: absolute;
-      inset: 0;
-      background: var(--sc-base);
-    }
-    .sc-glow::before {
-      content: '';
-      position: absolute;
-      width: 160%; height: 160%;
-      top: -30%; left: -30%;
-      background:
-        radial-gradient(ellipse at 25% 35%, var(--sc-c1) 0%, transparent 55%),
-        radial-gradient(ellipse at 75% 65%, var(--sc-c2) 0%, transparent 50%),
-        radial-gradient(ellipse at 60% 20%, var(--sc-c3) 0%, transparent 45%);
-      animation: sc-float-a var(--sc-speed, 7s) ease-in-out infinite alternate;
-      filter: blur(18px);
-    }
-    .sc-glow::after {
-      content: '';
-      position: absolute;
-      width: 150%; height: 150%;
-      top: -25%; left: -25%;
-      background:
-        radial-gradient(ellipse at 80% 25%, var(--sc-c2) 0%, transparent 45%),
-        radial-gradient(ellipse at 15% 75%, var(--sc-c3) 0%, transparent 45%),
-        radial-gradient(ellipse at 50% 80%, var(--sc-c1) 0%, transparent 40%);
-      animation: sc-float-b calc(var(--sc-speed, 7s) * 1.3) ease-in-out infinite alternate;
-      filter: blur(22px);
-    }
-    @keyframes sc-float-a {
-      0%   { transform: translate(0,    0)    rotate(0deg)   scale(1);    }
-      100% { transform: translate(8%,  10%)   rotate(15deg)  scale(1.08); }
-    }
-    @keyframes sc-float-b {
-      0%   { transform: translate(0,    0)    rotate(0deg)   scale(1.05); }
-      100% { transform: translate(-10%,-6%)   rotate(-10deg) scale(0.97); }
-    }
-
-    /* Glass content overlay */
-    .sc-content {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.76);
-      border: 1px solid rgba(255,255,255,0.13);
-      border-radius: 24px;
-      padding: 36px 32px;
-      display: flex;
-      flex-direction: column;
-      transition: background 0.3s;
-    }
-    .shader-card:hover .sc-content { background: rgba(0,0,0,0.65); }
-
-    .sc-icon {
-      width: 48px; height: 48px;
-      margin-bottom: 22px;
-      color: #fff;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
-      flex-shrink: 0;
-    }
-    .sc-title {
-      font-size: 19px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-      letter-spacing: -0.3px;
-    }
-    .sc-desc {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.7;
-      flex-grow: 1;
-      font-weight: 400;
-    }
-    .sc-link {
-      margin-top: 18px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.55);
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-    .shader-card:hover .sc-link { color: #fff; }
-
-    /* Mini shader cards — methodology flow */
-    .sc-mini { height: 128px; }
-    .sc-mini .sc-content {
-      padding: 18px 20px;
-      flex-direction: row;
-      align-items: center;
-      gap: 14px;
-    }
-    .sc-mini .sc-icon { width: 30px; height: 30px; margin-bottom: 0; flex-shrink: 0; }
-    .sc-mini .sc-title { font-size: 13.5px; line-height: 1.35; margin-bottom: 0; }
-    .sc-mini .sc-desc  { display: none; }
-
-    /* Output card (Actionable Intelligence) */
-    .sc-output { height: auto; }
-    .sc-output .sc-content {
-      position: relative;
-      padding: 22px 28px;
-      flex-direction: row;
-      align-items: center;
-      gap: 18px;
-      background: rgba(0,0,0,0.7);
-      border-color: rgba(255,255,255,0.22);
-    }
-    .sc-output .sc-icon { width: 36px; height: 36px; margin-bottom: 0; flex-shrink: 0; }
-    .sc-output .sc-title { font-size: 17px; margin-bottom: 4px; }
-    .sc-output-sub { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 500; }
-
-    /* Methodology flow layout */
-    .meth-flow { display: flex; flex-direction: column; }
-    .meth-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    /* ═══════════════════════════════════════════
-       METHODOLOGY SPLIT
-    ═══════════════════════════════════════════ */
-    #methodology {
-      padding: 80px 0;
-      position: relative;
-    }
-    .split-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    @media (max-width: 768px) {
-      .split-row { grid-template-columns: 1fr; gap: 40px; }
-    }
-
-    .split-content ul {
-      margin-top: 24px;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .split-content ul li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 14.5px;
-      color: var(--neutral);
-      line-height: 1.6;
-      font-weight: 400;
-    }
-    .split-content ul li::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .split-content .section-sub { font-size: 15px; }
-    .split-content .btn { margin-top: 32px; }
-
-    /* Sources flow visual */
-    .sources-flow {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px 30px;
-      position: relative;
-      overflow: hidden;
-    }
-    .sources-flow::before {
-      content: '';
-      position: absolute;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(120,63,228,0.15) 0%, transparent 70%);
-      top: -80px; right: -80px;
-    }
-    .sources-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 28px;
-      position: relative;
-      z-index: 2;
-    }
-    .source-node {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 12px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.8);
-      transition: border-color 0.2s;
-    }
-    .source-node:hover { border-color: rgba(120,63,228,0.35); }
-    .source-node-icon { font-size: 18px; flex-shrink: 0; }
-    .flow-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 2;
-    }
-    .flow-arrow-line {
-      width: 2px;
-      height: 36px;
-      background: linear-gradient(180deg, rgba(120,63,228,0.5), var(--green));
-      position: relative;
-    }
-    .flow-arrow-line::after {
-      content: '▼';
-      position: absolute;
-      bottom: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--green);
-      font-size: 12px;
-    }
-    .intelligence-output {
-      background: linear-gradient(135deg, rgba(120,63,228,0.18), rgba(61,253,160,0.08));
-      border: 1px solid rgba(120,63,228,0.35);
-      border-radius: 14px;
-      padding: 18px 22px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      position: relative;
-      z-index: 2;
-    }
-    .intelligence-output-icon {
-      width: 44px; height: 44px;
-      background: rgba(120,63,228,0.2);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .intelligence-output-text h4 {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 3px;
-    }
-    .intelligence-output-text p {
-      font-size: 12px;
-      color: var(--purple-light);
-      font-weight: 500;
-    }
-
-    /* ═══════════════════════════════════════════
-       PRODUCTS GALLERY
-    ═══════════════════════════════════════════ */
-    #deliverables { padding: 100px 0 80px; }
-
-    .gallery-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 48px;
-      max-width: 1160px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 28px;
-    }
-    .gallery-header-left { display: flex; flex-direction: column; gap: 12px; }
-    .gallery-header h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1.15;
-    }
-    .gallery-header p { max-width: 480px; color: var(--neutral); font-size: 16px; line-height: 1.7; }
-    .gallery-nav { display: flex; gap: 8px; flex-shrink: 0; }
-    .gallery-nav-btn {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: transparent;
-      color: var(--white);
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .gallery-nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
-    .gallery-nav-btn:disabled { opacity: 0.28; cursor: not-allowed; }
-    .gallery-nav-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    @media (max-width: 768px) { .gallery-nav { display: none; } }
-
-    .gallery-track-wrap { overflow: hidden; width: 100%; }
-    .gallery-track {
-      display: flex;
-      gap: 20px;
-      padding-left: max(28px, calc(50vw - 552px));
-      transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
-      will-change: transform;
-    }
-    .gallery-item {
-      flex: 0 0 380px;
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      min-height: 27rem;
-      display: block;
-      text-decoration: none;
-    }
-    @media (max-width: 768px) { .gallery-item { flex: 0 0 calc(100vw - 56px); } }
-    .gallery-item img {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center;
-      transition: transform 0.4s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-item-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
-        transparent 0%,
-        rgba(30,0,80,0.25) 45%,
-        rgba(7,0,26,0.88) 100%);
-    }
-    .gallery-item-content {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 28px 28px 32px;
-      color: var(--white);
-    }
-    .gallery-item-tag {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 100px;
-      padding: 4px 13px;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-      color: rgba(255,255,255,0.88);
-    }
-    .gallery-item-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: -0.3px;
-      line-height: 1.25;
-    }
-    .gallery-item-desc {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.65;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    .gallery-item-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.65);
-      transition: color 0.2s;
-    }
-    .gallery-item:hover .gallery-item-link { color: #fff; }
-    .gallery-item-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
-    .gallery-item:hover .gallery-item-link svg { transform: translateX(4px); }
-
-    .gallery-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 40px;
-    }
-    .gallery-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(120,63,228,0.25);
-      cursor: pointer;
-      padding: 0;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .gallery-dot.active { background: var(--purple); transform: scale(1.3); }
-
-    /* ═══════════════════════════════════════════
-       HOW IT WORKS
-    ═══════════════════════════════════════════ */
-    #how-it-works {
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #how-it-works .section-header { margin-bottom: 64px; text-align: center; max-width: none; }
-    #how-it-works .section-title  { text-align: center; }
-    #how-it-works .section-sub    { text-align: center; margin: 0 auto; }
-
-    /* Numbered connector row */
-    .hiw-connector {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      max-width: 860px;
-      margin: 0 auto 24px;
-    }
-    .hiw-connector::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: calc(100% / 8);
-      right: calc(100% / 8);
-      height: 2px;
-      background: linear-gradient(90deg, rgba(120,63,228,0.5), var(--green));
-      transform: translateY(-50%);
-    }
-    .hiw-num {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--neutral-dark);
-      border: 2px solid rgba(120,63,228,0.5);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--purple-light);
-      justify-self: center;
-      position: relative;
-      z-index: 2;
-    }
-    .hiw-num.active {
-      background: var(--purple);
-      border-color: var(--purple);
-      color: var(--white);
-      box-shadow: 0 0 20px rgba(120,63,228,0.6);
-    }
-
-    /* Cards grid */
-    .hiw-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      max-width: 1160px;
-    }
-    @media (max-width: 900px)  { .hiw-grid { grid-template-columns: 1fr 1fr; } .hiw-connector { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px)  { .hiw-grid { grid-template-columns: 1fr; } .hiw-connector { grid-template-columns: 1fr; } .hiw-connector::before { display: none; } }
-
-    .hiw-card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 20px;
-      padding: 28px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      transition: transform 0.3s, border-color 0.3s, background 0.3s;
-    }
-    .hiw-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(120,63,228,0.4);
-      background: rgba(120,63,228,0.07);
-    }
-    .hiw-icon {
-      width: 48px; height: 48px;
-      border-radius: 14px;
-      background: rgba(120,63,228,0.14);
-      border: 1px solid rgba(120,63,228,0.28);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--purple-light);
-      flex-shrink: 0;
-    }
-    .hiw-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .hiw-card h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.3;
-      letter-spacing: -0.2px;
-    }
-    .hiw-card p {
-      font-size: 13.5px;
-      color: var(--neutral);
-      line-height: 1.7;
-      font-weight: 400;
-      flex-grow: 1;
-    }
-
-/* ═══════════════════════════════════════════
-       PRICING
-    ═══════════════════════════════════════════ */
-    #pricing {
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #pricing .section-header { margin: 0 auto 64px; text-align: center; max-width: none; }
-    #pricing .section-title { text-align: center; }
-    #pricing .section-sub  { text-align: center; margin: 0 auto; }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      align-items: stretch;
-    }
-    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px)  { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
-
-    .pricing-card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 32px 28px;
-      position: relative;
-      transition: transform 0.3s, border-color 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
+    /* ─── Pricing (card structure of the live site) ─── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; margin-top: var(--space-6); }
+    @media (max-width: 1100px) { .pricing-grid { grid-template-columns: 1fr 1fr; row-gap: 32px; } }
+    @media (max-width: 640px)  { .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; } }
+    .pricing-card { position: relative; display: flex; flex-direction: column; background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-card); padding: 34px 26px 26px; transition: transform 0.3s var(--spring), border-color 0.3s, box-shadow 0.3s, background-color 0.3s; }
     .pricing-card:hover { transform: translateY(-4px); }
-    .pricing-card.featured {
-      background: rgba(120,63,228,0.1);
-      border-color: rgba(120,63,228,0.48);
-    }
-    .featured-label {
-      position: absolute;
-      top: -13px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--purple);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-
-    .plan-name {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--neutral);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .plan-price {
-      font-size: 44px;
-      font-weight: 900;
-      letter-spacing: -2px;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .plan-price sup { font-size: 20px; vertical-align: top; margin-top: 7px; font-weight: 600; }
+    .pricing-card.featured { background: rgba(120,63,228,0.1); border-color: rgba(120,63,228,0.48); }
+    .pricing-card.free-tier { border-color: rgba(61,253,160,0.3); }
+    .pricing-card.free-tier:hover { border-color: rgba(61,253,160,0.55); }
+    .pricing-card.is-selected { border-color: var(--purple); box-shadow: var(--shadow-float), 0 0 0 4px rgba(120,63,228,0.22); }
+    .card-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 700; padding: 4px 16px; border-radius: 100px; letter-spacing: 0.06em; white-space: nowrap; background: var(--purple); color: var(--white); }
+    .free-tier .card-badge { background: var(--green); color: var(--black); }
+    .plan-name { font-size: 12.5px; font-weight: 700; color: var(--neutral); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+    .featured .plan-name { color: var(--purple-light); }
+    .free-tier .plan-name { color: var(--green); }
+    .plan-price { font-size: 44px; font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 6px; }
+    .plan-price sup { font-size: 20px; vertical-align: top; margin-top: 7px; margin-right: 1px; font-weight: 600; display: inline-block; }
     .plan-price .period { font-size: 14px; font-weight: 400; color: var(--neutral); letter-spacing: 0; }
-    .plan-unit { font-size: 12px; color: var(--neutral); margin-bottom: 14px; font-weight: 400; }
-    .plan-desc { font-size: 13px; color: var(--neutral); margin-bottom: 22px; line-height: 1.65; font-weight: 400; }
-
+    .plan-unit { font-size: 12.5px; color: var(--neutral); min-height: 20px; }
+    .plan-desc { font-family: var(--serif); font-size: 1.0625rem; color: var(--text); line-height: 1.55; margin-top: 16px; }
+    @media (min-width: 1101px) { .plan-desc { min-height: calc(1.0625rem * 1.55 * 4); } }
     .plan-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 20px 0; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; flex-grow: 1; }
+    .plan-features li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+    .plan-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .pricing-card .btn { width: 100%; }
+    .sample-pick { display: flex; flex-direction: column; gap: 10px; }
+    .sample-pick label { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.75); }
+    .sample-pick .select { min-height: 44px; font-size: 0.875rem; padding: 10px 40px 10px 12px; }
 
-    .plan-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-      flex-grow: 1;
-    }
-    .plan-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.5;
-      font-weight: 400;
-    }
-    .plan-features li::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
+    /* ─── Order / request panels ─── */
+    .panel { margin-top: var(--space-5); border-radius: var(--radius-card); background: linear-gradient(180deg, #150A38, #0E0528); border: 1px solid rgba(176,138,248,0.25); box-shadow: var(--shadow-float); padding: var(--space-5); scroll-margin-top: 104px; position: relative; }
+    .panel:not([hidden]) { animation: panel-in 0.5s var(--spring); }
+    @keyframes panel-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .panel:not([hidden]) { animation: none; } }
+    @media (max-width: 700px) { .panel { padding: var(--space-4) 20px; } }
+    .panel-close { position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--neutral); cursor: pointer; display: grid; place-items: center; transition: color 0.2s, background-color 0.2s; }
+    .panel-close:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+    .panel-close svg { width: 16px; height: 16px; }
+    .panel-grid { display: grid; grid-template-columns: 5fr 7fr; gap: var(--space-6); }
+    @media (max-width: 900px) { .panel-grid { grid-template-columns: 1fr; gap: var(--space-4); } }
+    .panel h3 { font-size: 1.375rem; font-weight: 700; letter-spacing: -0.02em; padding-right: 40px; }
+    .panel-intro { font-family: var(--serif); font-size: 1.0625rem; color: var(--text-soft); margin-top: 8px; line-height: 1.6; }
+    .panel-intro strong { font-family: var(--ui); font-weight: 600; font-size: 1rem; color: var(--white); display: block; margin-bottom: 4px; }
 
-    /* ═══════════════════════════════════════════
-       CONTACT
-    ═══════════════════════════════════════════ */
-    #cta-section {
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-glow {
-      position: absolute;
-      width: 700px; height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(120,63,228,0.18) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .contact-layout {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      gap: 80px;
-      align-items: flex-start;
-    }
-    @media (max-width: 900px) {
-      .contact-layout { flex-direction: column; gap: 48px; }
-    }
+    /* ─── Form controls (shared) ─── */
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field + .field, .field-row + .field, .field + .field-row, .field-row + .field-row, .fieldset + .field, .field + .fieldset { margin-top: 20px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+    .field-row > .field + .field { margin-top: 0; }
+    @media (max-width: 600px) { .field-row { grid-template-columns: 1fr; } }
+    .field label, .fieldset legend { font-size: 0.8125rem; font-weight: 600; color: rgba(255,255,255,0.75); letter-spacing: 0.02em; }
+    .req { color: var(--purple-light); margin-left: 2px; }
+    .optional { color: var(--neutral); font-weight: 400; }
+    .hint { font-size: 0.8125rem; color: var(--neutral); line-height: 1.5; }
+    .input, .select, .textarea { width: 100%; min-height: 48px; padding: 12px 14px; font-size: 1rem; color: var(--white); background: rgba(255,255,255,0.04); border: 1px solid var(--border-2); border-radius: var(--radius-control); transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s; }
+    .input::placeholder, .textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .input:hover, .select:hover, .textarea:hover { border-color: rgba(255,255,255,0.24); }
+    .input:focus, .select:focus, .textarea:focus { outline: none; border-color: rgba(120,63,228,0.8); background: rgba(120,63,228,0.07); box-shadow: 0 0 0 4px rgba(120,63,228,0.22); }
+    .textarea { min-height: 110px; resize: vertical; line-height: 1.55; }
+    .select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 44px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23B08AF8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+    .select:invalid { color: rgba(255,255,255,0.5); }
+    .select option { background: #1a1430; color: var(--white); }
+    .was-validated .input:invalid, .was-validated .textarea:invalid, .was-validated .select:invalid, .select.is-invalid { border-color: var(--error); }
 
-    /* Left column */
+    .fieldset { border: 1px solid rgba(176,138,248,0.3); border-radius: 14px; padding: 18px; background: rgba(120,63,228,0.06); }
+    .fieldset legend { padding: 0 6px; }
+    .fieldset .hint { margin-bottom: 14px; }
+    .fieldset.is-invalid { border-color: var(--error); }
+    .or { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; color: var(--neutral); margin: 14px 0; }
+    .or::before, .or::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .drop { position: relative; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: var(--radius-control); border: 1.5px dashed rgba(176,138,248,0.45); background: rgba(7,0,26,0.4); cursor: pointer; transition: border-color 0.2s, background-color 0.2s; }
+    .drop:hover, .drop.dragging { border-color: var(--purple-light); background: rgba(120,63,228,0.1); }
+    .drop:focus-within { outline: 2px solid var(--green); outline-offset: 3px; }
+    .drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .drop svg { flex: none; width: 26px; height: 26px; color: var(--purple-light); stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .drop strong { display: block; font-size: 0.875rem; font-weight: 600; }
+    .drop span { display: block; font-size: 0.75rem; color: var(--neutral); margin-top: 2px; }
+    .file-list { list-style: none; margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .file-list li { font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text-soft); }
+
+    .check { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; font-size: 0.875rem; line-height: 1.55; color: var(--text-soft); cursor: pointer; }
+    .check + .check { margin-top: 14px; }
+    .check input { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; margin-top: 1px; cursor: pointer; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 6px; background: rgba(7,0,26,0.6); display: grid; place-items: center; transition: background-color 0.2s, border-color 0.2s; }
+    .check input::after { content: ''; width: 6px; height: 11px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0); margin-top: -2px; transition: transform 0.2s var(--spring); }
+    .check input:checked { background: var(--purple); border-color: var(--purple); }
+    .check input:checked::after { transform: rotate(45deg) scale(1); }
+    .was-validated .check input:invalid { border-color: var(--error); }
+    .check a { color: var(--white); text-underline-offset: 3px; }
+    .consents { margin-top: var(--space-4); }
+    .submit-row { margin-top: var(--space-4); display: flex; flex-direction: column; gap: 14px; }
+    .fineprint { font-size: 0.8125rem; line-height: 1.6; color: var(--neutral); text-align: center; }
+    .fineprint a { color: var(--text-soft); text-underline-offset: 3px; }
+    .form-error { font-size: 0.875rem; color: var(--error); text-align: center; }
+    .form-error:empty { display: none; }
+
+    .preview { margin-top: var(--space-3); padding: var(--space-3); border-radius: 14px; background: rgba(7,0,26,0.5); border: 1px solid var(--border); }
+    .preview-empty { font-family: var(--serif); color: var(--neutral); font-size: 1rem; }
+    .preview-name { font-size: 1.0625rem; font-weight: 600; }
+    .preview-desc { font-family: var(--serif); font-size: 1rem; color: var(--text-soft); margin-top: 6px; line-height: 1.55; }
+    .preview-meta { font-size: 0.8125rem; color: var(--purple-light); margin-top: 12px; }
+    .preview-for { font-size: 0.8125rem; line-height: 1.55; color: var(--text-soft); margin-top: 12px; }
+    .preview-for strong { display: block; font-weight: 600; color: var(--white); }
+    .preview .btn { margin-top: var(--space-3); padding: 10px 18px; min-height: 42px; font-size: 0.875rem; }
+    .next-steps { list-style: none; margin-top: var(--space-4); counter-reset: step; }
+    .next-steps li { counter-increment: step; position: relative; padding-left: 44px; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.55; color: var(--text-soft); }
+    .next-steps li + li { margin-top: var(--space-3); }
+    .next-steps li strong { display: block; font-family: var(--ui); font-size: 0.9375rem; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+    .next-steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-family: var(--ui); font-size: 0.8125rem; font-weight: 600; color: var(--purple-light); border: 1.5px solid rgba(176,138,248,0.45); }
+    .price-summary { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--border); font-size: 0.9375rem; color: var(--white); }
+    .success { max-width: 36rem; }
+    .success:focus { outline: none; }
+    .success-mark { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: rgba(61,253,160,0.12); border: 1.5px solid rgba(61,253,160,0.5); color: var(--green); margin-bottom: var(--space-3); }
+    .success-mark svg { width: 22px; height: 22px; }
+    .success h3 { font-size: 1.375rem; font-weight: 700; }
+    .success p { font-family: var(--serif); font-size: 1.125rem; line-height: 1.6; color: var(--text-soft); margin-top: 10px; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    /* ─── Founder ─── */
+    .founder { display: grid; grid-template-columns: 340px 1fr; gap: var(--space-6); align-items: center; }
+    @media (max-width: 760px) { .founder { grid-template-columns: 1fr; gap: var(--space-3); } }
+    /* Cut-out portrait that sits in the page: soft brand glow behind, suit fades into the background */
+    .founder-photo { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; isolation: isolate; }
+    .founder-photo::before { content: ''; position: absolute; left: 8%; right: 8%; top: 6%; bottom: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(120,63,228,0.16), rgba(120,63,228,0.05) 65%, transparent); z-index: -1; }
+    .founder-photo img { width: 100%; height: 100%; object-fit: contain; -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 98%); mask-image: linear-gradient(to bottom, #000 68%, transparent 98%); }
+    @media (max-width: 760px) { .founder-photo { max-width: 260px; } }
+    .founder-text { padding-bottom: var(--space-5); }
+    @media (max-width: 760px) { .founder-text { padding-bottom: 0; } }
+    .founder-quote { font-family: var(--serif); font-size: clamp(1.375rem, 2.3vw, 1.875rem); line-height: 1.42; color: var(--text); margin-top: var(--space-3); max-width: 34ch; }
+    .founder-by { margin-top: var(--space-4); display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+    .founder-by strong { font-weight: 600; }
+    .founder-by span { color: var(--neutral); font-size: 0.9375rem; }
+    .text-link { color: var(--purple-light); font-weight: 500; font-size: 0.9375rem; text-underline-offset: 4px; }
+    .text-link:hover { color: var(--purple-100); }
+    .li-link { display: inline-flex; align-items: center; gap: 8px; }
+    .li-link svg { width: 18px; height: 18px; }
+
+    /* ─── FAQ ─── */
+    .faq-grid { display: grid; grid-template-columns: 4fr 8fr; gap: var(--space-6); }
+    @media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; gap: var(--space-4); } }
+    .faq-list details { border-bottom: 1px solid var(--border); }
+    .faq-list details:first-child { border-top: 1px solid var(--border); }
+    .faq-list summary { list-style: none; cursor: pointer; padding: 22px 44px 22px 0; position: relative; font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: ''; position: absolute; right: 6px; top: 50%; width: 10px; height: 10px; margin-top: -7px; border: solid var(--purple-light); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform 0.3s var(--spring); }
+    .faq-list details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+    .faq-list summary:hover { color: var(--purple-light); }
+    .faq-list .answer { padding: 0 0 24px; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.7; color: var(--text-soft); max-width: 40rem; }
+    .faq-list .answer p + p, .faq-list .answer ul + p { margin-top: 10px; }
+    .faq-ul { margin: 10px 0 0; padding-left: 20px; }
+    .faq-ul li + li { margin-top: 6px; }
+    .faq-ul strong { font-family: var(--ui); font-weight: 600; font-size: 0.9375rem; color: var(--white); }
+
+    /* ─── Contact (as on the live site) ─── */
+    .contact { padding: var(--space-8) 0; position: relative; overflow: hidden; border-top: 1px solid var(--border); }
+    .contact-glow { position: absolute; width: 760px; height: 540px; border-radius: 50%; background: radial-gradient(ellipse, rgba(120,63,228,0.2) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .contact-layout { position: relative; z-index: 2; display: flex; gap: 80px; align-items: flex-start; }
+    @media (max-width: 900px) { .contact-layout { flex-direction: column; gap: 40px; } }
     .contact-left { flex: 0 0 380px; max-width: 380px; }
     @media (max-width: 900px) { .contact-left { flex: none; max-width: none; } }
-
-    .contact-left .section-tag { margin-bottom: 16px; }
-    .contact-left h2 {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 800;
-      letter-spacing: -1.2px;
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-    .contact-left p {
-      font-size: 15px;
-      color: var(--neutral);
-      line-height: 1.75;
-      font-weight: 400;
-      margin-bottom: 36px;
-    }
-
-    .contact-methods { display: flex; flex-direction: column; gap: 20px; }
-    .contact-method {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.72);
-      font-weight: 400;
-    }
-    .contact-method-icon {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      background: rgba(120,63,228,0.12);
-      border: 1px solid rgba(120,63,228,0.28);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      color: var(--purple-light);
-    }
+    .contact-left h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.15; margin-bottom: 18px; }
+    .contact-left p { font-family: var(--serif); font-size: 1.125rem; color: var(--text-soft); line-height: 1.65; margin-bottom: 32px; }
+    .contact-method { display: flex; align-items: center; gap: 14px; font-size: 14px; color: rgba(255,255,255,0.8); text-decoration: none; }
+    .contact-method:hover { color: var(--white); }
+    .contact-method-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(120,63,228,0.12); border: 1px solid rgba(120,63,228,0.28); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--purple-light); }
     .contact-method-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-
-    /* Right column — form */
-    .contact-right { flex: 1; }
-
-    .contact-form {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 40px 36px;
-    }
+    .contact-right { flex: 1; width: 100%; }
+    .contact-form { background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-card); padding: 40px 36px; }
     @media (max-width: 480px) { .contact-form { padding: 28px 20px; } }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-    @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
-
-    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
-    .form-group:last-of-type { margin-bottom: 0; }
-
-    .form-label {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.03em;
-    }
-    .form-input,
-    .form-textarea {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 11px 14px;
-      font-family: inherit;
-      font-size: 14px;
-      color: var(--white);
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-      width: 100%;
-    }
-    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.22); }
-    .form-input:focus, .form-textarea:focus {
-      border-color: rgba(120,63,228,0.7);
-      background: rgba(120,63,228,0.06);
-    }
-    .form-textarea { height: 130px; resize: none; }
-
-    .form-submit {
-      width: 100%;
-      margin-top: 24px;
-      padding: 14px 28px;
-      background: var(--purple);
-      color: var(--white);
-      font-family: inherit;
-      font-size: 15px;
-      font-weight: 700;
-      border: none;
-      border-radius: 100px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      animation: glow-pulse 2.8s ease-in-out infinite;
-    }
-    .form-submit:hover {
-      background: var(--purple-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 36px rgba(120,63,228,0.6);
-      animation: none;
-    }
-    .form-note {
-      margin-top: 14px;
-      font-size: 12px;
-      color: var(--neutral);
-      text-align: center;
-    }
-
-    /* ═══════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════ */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding: 60px 0 32px;
-    }
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 52px;
-    }
-    @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-
-    .footer-brand img { height: 160px; width: auto; display: block; margin-bottom: 16px; border-radius: 18px; }
-    .footer-brand p {
-      font-size: 13.5px;
-      color: var(--neutral);
-      line-height: 1.7;
-      max-width: 240px;
-      font-weight: 400;
-    }
-
-    .footer-col h4 {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--neutral);
-      margin-bottom: 18px;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col a {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.48);
-      transition: color 0.2s;
-      font-weight: 400;
-    }
-    .footer-col a:hover { color: var(--white); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .footer-bottom p { font-size: 13px; color: var(--neutral); font-weight: 400; }
-    .footer-legal { display: flex; gap: 20px; }
-    .footer-legal a { font-size: 13px; color: var(--neutral); transition: color 0.2s; }
+    /* ─── Footer ─── */
+    .site-footer { padding: var(--space-4) 0 var(--space-5); font-size: 0.875rem; color: var(--neutral); border-top: 1px solid var(--border); }
+    .footer-top { display: flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; align-items: center; }
+    .footer-logo { display: inline-flex; }
+    .footer-links { display: flex; gap: var(--space-4); flex-wrap: wrap; list-style: none; }
+    .footer-links a { text-decoration: none; color: var(--neutral); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-legal { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border); line-height: 1.7; font-size: 0.8125rem; }
+    .footer-legal a { color: var(--text-soft); text-underline-offset: 3px; }
     .footer-legal a:hover { color: var(--white); }
 
-    /* ─── SKIP LINK ─── */
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 16px;
-      z-index: 9999;
-      background: var(--purple);
-      color: var(--white);
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: top 0.2s;
-    }
-    .skip-link:focus { top: 16px; }
+    /* ─── Mobile sticky call to action ─── */
+    .sticky-cta { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 900; display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 18px; border-radius: 999px; background: rgba(21,10,56,0.92); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(176,138,248,0.35); box-shadow: 0 12px 40px -8px rgba(0,0,0,0.6); transform: translateY(140%); transition: transform 0.4s var(--spring); }
+    .sticky-cta p { font-size: 0.875rem; font-weight: 500; color: var(--white); }
+    .sticky-cta p .muted { color: var(--neutral); font-weight: 400; }
+    .sticky-cta .btn { min-height: 44px; padding: 10px 20px; font-size: 0.875rem; }
+    .sticky-cta.show { transform: none; }
+    @media (max-width: 860px) { .sticky-cta { display: flex; } }
 
-    /* ─── FOCUS VISIBLE ─── */
-    :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
-
-    /* ─── FORM: validation states ─── */
-    .form-input.error, .form-textarea.error {
-      border-color: rgba(253, 80, 80, 0.7);
-      background: rgba(253, 80, 80, 0.04);
-    }
-    .form-input.valid, .form-textarea.valid {
-      border-color: rgba(61, 253, 160, 0.5);
-    }
-    .field-error {
-      font-size: 11.5px;
-      color: #fd7070;
-      margin-top: 4px;
-      display: none;
-    }
-    .field-error.visible { display: block; }
-    .form-label .required { color: #fd7070; margin-left: 2px; }
-
-    /* ─── FORM: better touch targets ─── */
-    .form-input, .form-textarea {
-      padding: 14px 16px;
-    }
-    .btn.plan-btn { min-height: 44px; }
-
-    /* ─── PRICING: free tier accent ─── */
-    .pricing-card.free-tier {
-      border-color: rgba(61, 253, 160, 0.3);
-    }
-    .pricing-card.free-tier:hover {
-      border-color: rgba(61, 253, 160, 0.55);
-    }
-    .free-label {
-      position: absolute;
-      top: -13px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--green);
-      color: var(--black);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-
-    /* ─── HERO: mobile button stacking ─── */
-    @media (max-width: 480px) {
-      .hero-cta {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        max-width: 320px;
-      }
-      .hero-cta .btn { width: 100%; justify-content: center; }
-    }
+    /* ─── Sample dialog ─── */
+    .sample-dialog { width: min(1040px, 94vw); height: min(90vh, 1000px); max-width: none; max-height: none; margin: auto; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: #F4F3F9; box-shadow: 0 40px 120px -20px rgba(0,0,0,0.7); }
+    .sample-dialog::backdrop { background: rgba(7,0,26,0.8); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .sample-dialog[open] { display: flex; flex-direction: column; animation: panel-in 0.4s var(--spring); }
+    .dialog-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 10px 10px 22px; background: var(--black); color: var(--white); }
+    .dialog-bar p { font-size: 0.875rem; font-weight: 500; }
+    .dialog-close { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: transparent; cursor: pointer; display: grid; place-items: center; color: var(--white); transition: background-color 0.2s; }
+    .dialog-close:hover { background: rgba(255,255,255,0.08); }
+    .dialog-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+    .dialog-open { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--border); color: var(--white); font-size: 0.8125rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s, border-color 0.2s; }
+    .dialog-open:hover { background: rgba(255,255,255,0.08); border-color: rgba(176,138,248,0.6); }
+    .dialog-open:active { background: rgba(255,255,255,0.14); }
+    .dialog-open svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    @media (max-width: 420px) { .dialog-open { padding: 0 12px; } }
+    .dialog-close svg { width: 18px; height: 18px; }
+    .sample-dialog iframe { flex: 1; width: 100%; border: 0; }
+    @media (max-width: 600px) { .sample-dialog { width: 100vw; height: 100dvh; border-radius: 0; } }
   </style>
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ═══ NAV ═══ -->
-<nav id="nav">
+<header class="site-nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <img src="new%20logo%20(3).png" alt="The Home of Insights" height="52" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="#methodology">Services</a></li>
-      <li><a href="#deliverables">Examples</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#cta-section">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+    <a href="#top" class="nav-logo" aria-label="The Home of Insights, back to top"><img src="assets/logo.png" alt="The Home of Insights" width="95" height="72" /></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#brief">Insight Out</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <span class="nav-spacer" aria-hidden="true"></span>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <a href="#methodology">Services</a>
-  <a href="#deliverables">Examples</a>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#brief">Insight Out</a>
   <a href="#pricing">Pricing</a>
-  <a href="#cta-section">Contact</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<main id="main-content">
+<main id="main">
 
-<!-- ═══ HERO ═══ -->
-<section id="hero">
-  <!-- Video background -->
-  <video class="hero-video" autoplay loop muted playsinline>
-    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" type="video/mp4" />
-  </video>
+<!-- ═══ HERO (kept as on the live site) ═══ -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <video class="hero-video" id="hero-video" autoplay loop muted playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4" /></video>
   <div class="hero-video-overlay"></div>
-
-  <!-- Full-bleed toggle -->
-  <button id="hero-toggle-btn" class="hero-toggle" aria-label="Switch to fit-to-content">
-    <!-- Minimize icon (default: full-bleed active) -->
+  <button id="hero-toggle" class="hero-toggle" aria-label="Switch to fit-to-content">
     <svg id="icon-minimize" viewBox="0 0 24 24"><polyline points="8 3 3 3 3 8"/><polyline points="21 8 21 3 16 3"/><polyline points="8 21 3 21 3 16"/><polyline points="21 16 21 21 16 21"/></svg>
-    <!-- Maximize icon (hidden when full-bleed) -->
-    <svg id="icon-maximize" viewBox="0 0 24 24" style="display:none"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+    <svg id="icon-maximize" viewBox="0 0 24 24" hidden><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
   </button>
-
-  <div class="hero-glow-1"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-grid"></div>
-  <div class="container" style="position:relative;z-index:3;">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <h1 class="reveal d1">
-          Welcome to<br>The Home of Insights
-        </h1>
-        <p class="hero-sub reveal d2">
-          Cut through the noise. Turn information into actionable insights.
-        </p>
-        <div class="hero-cta reveal d3">
-          <a href="#methodology" class="btn btn-primary">Explore Our Services</a>
-          <a href="#pricing" class="btn btn-outline">Free Weekly Briefing</a>
-        </div>
-        <p class="hero-note reveal d4">Based on carefully selected publicly available sources</p>
+  <div class="hero-glow-1"></div><div class="hero-glow-2"></div><div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 id="hero-title" class="load-in">Welcome to<br>The Home of Insights</h1>
+      <p class="hero-sub load-in l2">Cut through the noise. Turn information into actionable insights.</p>
+      <div class="hero-cta load-in l3">
+        <a href="#problem" class="btn btn-primary">Discover Insight Out</a>
+        <a href="#pricing" class="btn btn-outline">See pricing</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══ METHODOLOGY ═══ -->
-<section id="methodology">
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="section" id="problem" aria-labelledby="problem-title">
   <div class="container">
-    <div class="split-row reveal">
-      <div class="split-content">
-        <span class="section-tag">Our Methodology</span>
-        <h2 class="section-title" style="font-size:clamp(26px,3.5vw,38px);">From Public Data<br>to Strategic Clarity</h2>
-        <p class="section-sub">Our findings are based solely on secondary market research, rigorously curated from publicly available sources. We transform publicly accessible raw data into foundational clarity designed to drive dynamic decision-making without the high cost of manual primary research.</p>
-        <ul>
-          <li>Consultancy reports &amp; industry association data</li>
-          <li>LinkedIn profiles &amp; professional network signals</li>
-          <li>Event briefings &amp; conference intelligence</li>
-          <li>Company filings — annual reports, 10-K filings, success stories &amp; case studies</li>
+    <div class="problem-intro">
+      <h2 id="problem-title" class="h2">The signals are out there. The time to follow them isn't.</h2>
+      <p class="lead">Relevant signals appear constantly: in earnings calls, analyst reports and competitors' announcements. Nobody has the hours to follow them all, so the developments that should shape your thinking are missed or reach you too late.</p>
+      <p class="gap-line">This is the gap we close.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE BRIEF: what it is and how every item is structured ═══ -->
+<section class="section band" id="brief" aria-labelledby="brief-title">
+  <div class="container">
+    <h2 id="brief-title" class="brief-name"><span data-brief-name>Insight Out</span><span class="brief-slogan">Know your market inside out.</span><span class="brief-kind">A monthly intelligence brief, delivered by The Home of Insights</span></h2>
+    <div class="brief-top">
+      <div>
+        <p class="focus-title">Overview</p>
+        <p class="brief-copy">Designed to help you and your teams understand emerging trends, competitors' moves, new operating models and developments in technology and AI.</p>
+        <p class="brief-copy">Its purpose is to keep you informed about relevant industry developments, so you have broader context when making your own strategic or investment decisions.</p>
+      </div>
+      <div>
+        <p class="focus-title">What it covers</p>
+        <ul class="focus">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg><h3>Emerging trends</h3><p>Shifts in your industry before they become obvious.</p></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><h3>Competitors' moves</h3><p>Investments, partnerships, launches and restructurings.</p></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg><h3>New operating models</h3><p>How leading organisations reshape the way they work.</p></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg><h3>Technology and AI</h3><p>What is being adopted, where, and with what results.</p></li>
         </ul>
-        <a href="#pricing" class="btn btn-primary">See Our Services</a>
       </div>
-      <div class="meth-flow">
-        <!-- 2×2 mini shader source cards -->
-        <div class="meth-grid">
-          <div class="shader-card sc-mini" style="--sc-base:hsl(290,80%,10%);--sc-c1:hsla(280,100%,50%,0.9);--sc-c2:hsla(320,100%,58%,0.8);--sc-c3:hsla(300,100%,68%,0.7);--sc-speed:7s;">
-            <div class="sc-glow"></div>
-            <div class="sc-content">
-              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              <h3 class="sc-title">Consultancy Reports</h3>
-            </div>
-          </div>
-          <div class="shader-card sc-mini" style="--sc-base:hsl(190,80%,9%);--sc-c1:hsla(200,100%,40%,0.9);--sc-c2:hsla(180,100%,52%,0.8);--sc-c3:hsla(160,90%,45%,0.7);--sc-speed:9s;">
-            <div class="sc-glow"></div>
-            <div class="sc-content">
-              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18M9 21V7l3-4 3 4v14M5 21V11l-2-2M19 21V11l2-2"/><rect x="9" y="11" width="6" height="4"/></svg>
-              <h3 class="sc-title">Professional Industry Associations</h3>
-            </div>
-          </div>
-          <div class="shader-card sc-mini" style="--sc-base:hsl(130,70%,8%);--sc-c1:hsla(120,100%,32%,0.9);--sc-c2:hsla(140,100%,50%,0.8);--sc-c3:hsla(100,90%,40%,0.7);--sc-speed:8s;">
-            <div class="sc-glow"></div>
-            <div class="sc-content">
-              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <h3 class="sc-title">Annual Reports &amp; 10-K Filings</h3>
-            </div>
-          </div>
-          <div class="shader-card sc-mini" style="--sc-base:hsl(35,80%,9%);--sc-c1:hsla(30,100%,48%,0.9);--sc-c2:hsla(50,100%,58%,0.8);--sc-c3:hsla(42,90%,52%,0.7);--sc-speed:6s;">
-            <div class="sc-glow"></div>
-            <div class="sc-content">
-              <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <h3 class="sc-title">Event Briefings</h3>
-            </div>
-          </div>
-        </div>
+    </div>
 
-        <!-- Down arrow -->
-        <div class="flow-arrow">
-          <div class="flow-arrow-line"></div>
-        </div>
-
-        <!-- Actionable Intelligence output -->
-        <div class="shader-card sc-output" style="--sc-base:hsl(340,70%,9%);--sc-c1:hsla(330,100%,42%,0.9);--sc-c2:hsla(350,100%,58%,0.8);--sc-c3:hsla(340,90%,68%,0.7);--sc-speed:7.5s;">
-          <div class="sc-glow"></div>
-          <div class="sc-content">
-            <svg class="sc-icon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <div>
-              <h3 class="sc-title">Actionable Intelligence</h3>
-              <p class="sc-output-sub">Precise · Actionable · Decision-Ready</p>
-            </div>
-          </div>
-        </div>
+    <div class="brief-structure">
+      <div>
+        <h3 class="h2">Each news item comes with a clear insight</h3>
+        <p class="lead">Every edition is a curated set of news items, and each one is built the same way.</p>
+        <ul class="parts">
+          <li><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h10"/></svg></span><div><strong>What happened</strong><span>A clear overview of the news, with the facts and figures that matter.</span></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3z"/></svg></span><div><strong>Why it matters</strong><span>What the news signals for the industry, and why it is relevant to you.</span></div></li>
+          <li class="is-trust"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><polyline points="9 12 11 14 15 10"/></svg></span><div><strong>Reliable sources, no hallucinations</strong><span>Carefully selected sources only, so every fact can be verified.</span></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><div><strong>Direct link to the source</strong><span>Go straight to the original whenever you want the full detail.</span></div></li>
+        </ul>
       </div>
+
+      <figure class="stack" aria-label="Example of how a news item is presented">
+        <div class="item-card">
+          <div class="item-head"><p class="item-theme">Partnerships &amp; JVs</p><p class="item-date">Enterprise AI Monitor, 15 Sep 2026</p></div>
+          <div class="item-body">
+            <p class="item-headline">TotalEnergies commits more than $115 million to a joint AI lab with Mistral AI</p>
+            <p class="item-label">What happened</p>
+            <p class="item-text">TotalEnergies and Mistral AI, the French AI model developer, launched a three-year programme worth more than $115 million to build AI models for oil and gas exploration, reservoir characterisation and field development. The work runs as a joint laboratory pairing TotalEnergies' subsurface specialists with Mistral's researchers and engineers.</p>
+            <div class="item-why"><p class="item-label">Why it matters</p><p class="item-text">Energy companies are moving AI spending from generic productivity tools into the core of how they make money: where to drill and how long fields keep producing. It also shows large European corporates choosing a European model partner and proprietary models trained on their own data.</p></div>
+            <span class="item-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Read the source</span>
+          </div>
+        </div>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW IT WORKS ═══ -->
-<section id="how-it-works">
+<!-- ═══ HOW IT WORKS: signals in, the brief out (follows the Insight Out overview) ═══ -->
+<section class="section flow-section" id="how-it-works" aria-labelledby="flow-title">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">How It Works</span>
-      <h2 class="section-title">From request to insight — in four simple steps</h2>
-      <p class="section-sub">No lengthy onboarding. Just tell us what you need and we handle the rest.</p>
-    </div>
+    <figure class="flow" id="flow" aria-labelledby="flow-title">
+      <p class="flow-title" id="flow-title">Relevant signals appear every day.<span>We select the ones that matter and turn them into actionable insights.</span></p>
+      <div class="flow-grid">
+        <ul class="cloud" aria-hidden="true">
+          <li class="s2">Vendor rebrands its chatbot as an AI agent</li>
+          <li class="s1 m-hide">AI conference line-up announced</li>
+          <li class="s3 sig" style="--d:0s"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg></span>Accenture and Google Cloud embed 1,000 AI engineers</li>
+          <li class="s1">Keynote promises an "AI-first" future</li>
+          <li class="s4">Tech CEO predicts AGI by 2030</li>
+          <li class="s2 m-hide">New AI whitepaper with no customer data</li>
+          <li class="s1 m-hide">Hackathon winners announced</li>
+          <li class="s3 sig" style="--d:0.3s"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg></span>Bank of America's 140 AI projects return twice their cost</li>
+          <li class="s2">Cloud provider opens a new office</li>
+          <li class="s1">AI ethics panel discussion recorded</li>
+          <li class="s3 m-hide">Start-up unveils new logo</li>
+          <li class="s2 sig" style="--d:0.6s"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg></span>Samsung leads Mistral AI's EUR 3 billion round</li>
+          <li class="s2">Top 10 AI trends listicle</li>
+          <li class="s4 m-hide">Chip maker teases next launch</li>
+          <li class="s1">Minor app update released</li>
+          <li class="s1 m-hide">Influencer reviews new AI gadget</li>
+          <li class="s2 m-hide">Pilot announced without a budget</li>
+          <li class="s3 sig" style="--d:0.9s"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg></span>Insurer VIG buys 25% of its AI telematics partner</li>
+          <li class="s1">Webinar recording published</li>
+          <li class="s2">AI assistant gets a new voice</li>
+          <li class="s1 m-hide">Podcast on the future of work</li>
+          <li class="s3 m-hide">Executive interview on innovation culture</li>
+          <li class="s1">Developer conference date set</li>
+        </ul>
 
-    <!-- Step numbers with connecting line -->
-    <div class="hiw-connector">
-      <div class="hiw-num active">1</div>
-      <div class="hiw-num">2</div>
-      <div class="hiw-num">3</div>
-      <div class="hiw-num">4</div>
-    </div>
-
-    <!-- Step cards -->
-    <div class="hiw-grid">
-
-      <div class="hiw-card reveal d1">
-        <div class="hiw-icon">
-          <!-- layers / pick -->
-          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <div class="flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
+          <span>Carefully selected and analysed</span>
         </div>
-        <h3>Choose your product</h3>
-        <p>Browse our intelligence tiers — free weekly briefing, newsletter, company profile, or full custom report — and pick the one that matches your strategic need.</p>
-      </div>
 
-      <div class="hiw-card reveal d2">
-        <div class="hiw-icon">
-          <!-- form / edit -->
-          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        <div class="report" aria-hidden="true">
+          <div class="report-head">
+            <div class="rh-text">
+              <p class="rh-month">September 2026</p>
+              <strong data-brief-name>Insight Out</strong>
+              <p class="rh-dek">Know your market inside out.</p>
+              <small>Enterprise AI, Tech &amp; Partnerships Monitor</small>
+            </div>
+            <img src="assets/logo.png" alt="" width="92" height="70" />
+          </div>
+          <div class="report-body">
+            <div class="r-item" style="--d:1.2s">
+              <span class="r-theme">Partnerships &amp; JVs</span>
+              <p class="r-title">Accenture and Google Cloud put 1,000 AI engineers inside client companies</p>
+              <p class="r-text">A new joint unit will embed about 1,000 forward-deployed engineers with clients to build and run AI on Google's Gemini Enterprise platform.</p>
+              <div class="r-why"><p class="r-label">Why it matters</p><p class="r-text">Enterprise AI is now being won at the deployment stage. Implementation capacity is becoming the scarce resource, and AI platforms now come with embedded delivery teams.</p></div>
+              <span class="r-src"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/></svg>Source</span>
+            </div>
+            <div class="r-item" style="--d:1.45s">
+              <span class="r-theme t2">Deployments &amp; ROI</span>
+              <p class="r-title">Bank of America says 140 AI projects returned twice their cost</p>
+              <p class="r-text">AI implementations built for $400 million have generated $800 million in benefits, and the bank plans to double its AI budget next year.</p>
+              <div class="r-why"><p class="r-label">Why it matters</p><p class="r-text">A rare bank disclosure that ties AI spending to a measured return across a whole portfolio, not a single pilot. It sets a public benchmark peers will be measured against.</p></div>
+              <span class="r-src"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/></svg>Source</span>
+            </div>
+            <div class="r-item" style="--d:1.7s">
+              <span class="r-theme t3">Corporate venture capital</span>
+              <p class="r-title">Samsung leads two of Europe's largest AI funding rounds in one week</p>
+              <p class="r-text">Samsung Electronics led Mistral AI's EUR 3 billion Series D and co-led a Series A of more than EUR 200 million in Dutch AI chip start-up EUCLYD.</p>
+              <div class="r-why"><p class="r-label">Why it matters</p><p class="r-text">Corporate venture capital is shaping which AI companies Europe ends up with. Samsung is backing both layers of the stack: the models and the hardware that runs them.</p></div>
+              <span class="r-src"><svg viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/></svg>Source</span>
+            </div>
+          </div>
         </div>
-        <h3>Fill in the form</h3>
-        <p>Tell us your focus area, target companies, markets, or competitors. The more context you provide, the sharper and more actionable your intelligence will be.</p>
       </div>
-
-      <div class="hiw-card reveal d3">
-        <div class="hiw-icon">
-          <!-- mail / invoice -->
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3>Approve &amp; pay the invoice</h3>
-        <p>We'll send a confirmation email with scope details and an invoice. Once you approve and payment is received, your order moves into production immediately.</p>
-      </div>
-
-      <div class="hiw-card reveal d4">
-        <div class="hiw-icon">
-          <!-- inbox / deliver -->
-          <svg viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
-        </div>
-        <h3>Delivered within 5 working days</h3>
-        <p>Your finished intelligence product arrives directly in your inbox — ready to present, share with your team, and act on without delay.</p>
-      </div>
-
-    </div>
+      <figcaption class="flow-note">Real items from the September 2026 edition of the Enterprise AI, Tech &amp; Partnerships Monitor.</figcaption>
+    </figure>
   </div>
 </section>
 
-
-<!-- ═══ DELIVERABLES PREVIEW ═══ -->
-<section id="deliverables">
-  <!-- Header inside container for alignment -->
-  <div class="gallery-header reveal">
-    <div class="gallery-header-left">
-      <span class="section-tag">Our Products</span>
-      <h2>Intelligence products<br>built for every need</h2>
-      <p>Three distinct deliverables — each designed to give you the right depth of intelligence at the right moment.</p>
-    </div>
-    <div class="gallery-nav">
-      <button id="gallery-prev" class="gallery-nav-btn" aria-label="Previous" disabled>
-        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      </button>
-      <button id="gallery-next" class="gallery-nav-btn" aria-label="Next">
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Full-width scrolling track -->
-  <div class="gallery-track-wrap">
-    <div class="gallery-track" id="gallery-track">
-
-      <!-- Card 1: Newsletter -->
-      <a href="#" class="gallery-item" id="newsletter-example-btn" onclick="openBriefingLightbox(event)">
-        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80" alt="Market Intelligence Newsletter" loading="lazy" />
-        <div class="gallery-item-overlay"></div>
-        <div class="gallery-item-content">
-          <span class="gallery-item-tag">Newsletter</span>
-          <div class="gallery-item-title">Market Intelligence Newsletter</div>
-          <div class="gallery-item-desc">Curated strategic briefings delivered weekly, monthly, or daily — market trends, competitive signals, and sector analysis distilled for busy leaders.</div>
-          <div class="gallery-item-link">
-            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </div>
-      </a>
-
-      <!-- Card 2: Company Profiles -->
-      <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80" alt="Company Profiles" loading="lazy" />
-        <div class="gallery-item-overlay"></div>
-        <div class="gallery-item-content">
-          <span class="gallery-item-tag">Company Profile</span>
-          <div class="gallery-item-title">Company Profiles</div>
-          <div class="gallery-item-desc">In-depth intelligence on any company — financials, strategic positioning, vulnerabilities, and recent developments — before your critical meeting.</div>
-          <div class="gallery-item-link">
-            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </div>
-      </a>
-
-      <!-- Card 3: Industry Reports -->
-      <a href="#pricing" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1080&q=80" alt="Custom Industry Reports" loading="lazy" />
-        <div class="gallery-item-overlay"></div>
-        <div class="gallery-item-content">
-          <span class="gallery-item-tag">Industry Report</span>
-          <div class="gallery-item-title">Custom Industry Reports</div>
-          <div class="gallery-item-desc">Full-scope intelligence reports with executive summaries, market dynamics analysis, competitive driver mapping, and numbered strategic recommendations.</div>
-          <div class="gallery-item-link">
-            See example <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- Dot indicators -->
-  <div class="gallery-dots">
-    <button class="gallery-dot active" aria-label="Go to slide 1"></button>
-    <button class="gallery-dot" aria-label="Go to slide 2"></button>
-    <button class="gallery-dot" aria-label="Go to slide 3"></button>
-  </div>
-</section>
-
-<!-- ═══ PRICING ═══ -->
-<section id="pricing">
+<!-- ═══ OPTIONS + PRICING ═══ -->
+<section class="section" id="pricing" aria-labelledby="pricing-title">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Pricing</span>
-      <h2 class="section-title">Pick the Intelligence Tier That Matches<br>Your Strategic Needs</h2>
-      <p class="section-sub">From free weekly briefings to custom strategic reports — intelligence at every level.</p>
+    <div class="section-head center">
+      <h2 id="pricing-title">Choose your intelligence brief</h2>
+      <p class="lead">Start with a free sample. Simple monthly pricing, cancel anytime.</p>
     </div>
 
     <div class="pricing-grid">
-
-      <!-- Newsletter -->
-      <div class="pricing-card reveal d1">
-        <div class="plan-name">Market Intelligence Newsletter</div>
-        <div class="plan-price"><sup>$</sup>99<span class="period">/mo</span></div>
-        <div class="plan-unit">per user</div>
-        <p class="plan-desc">Save time and receive curated, strategic insights monthly, weekly, or daily.</p>
-        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Get Started</a>
+      <article class="pricing-card free-tier" data-card="sample">
+        <p class="card-badge">Start for free</p>
+        <p class="plan-name">Free sample</p>
+        <p class="plan-price"><sup>$</sup>0</p>
+        <p class="plan-unit">No sign-up, no payment</p>
+        <p class="plan-desc">Read a complete intelligence brief before you decide.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>Monthly / Weekly / Daily cadence</li>
-          <li>Curated strategic insights</li>
-          <li>Market trend analysis</li>
-          <li>Competitive landscape updates</li>
-          <li>Priority email delivery</li>
+          <li>Five briefs to choose from</li>
+          <li>The full brief, exactly as subscribers receive it</li>
+          <li>Same topics as our catalogue</li>
         </ul>
-      </div>
-
-      <!-- Profiles -->
-      <div class="pricing-card featured reveal d2">
-        <div class="featured-label">Most Popular</div>
-        <div class="plan-name">Company Profiles</div>
-        <div class="plan-price"><sup>$</sup>399</div>
-        <div class="plan-unit">per profile</div>
-        <p class="plan-desc">Get detailed profiles on financials, developments, and vulnerabilities before crucial customer meetings.</p>
-        <a href="#cta-section" class="btn btn-primary plan-btn" style="width:100%;justify-content:center;">Order a Profile</a>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>Financial overview</li>
-          <li>Recent developments</li>
-          <li>Vulnerability analysis</li>
-          <li>Meeting preparation brief</li>
-          <li>Delivered within agreed timeline</li>
-        </ul>
-      </div>
-
-      <!-- Reports -->
-      <div class="pricing-card reveal d3">
-        <div class="plan-name">Custom Industry Reports</div>
-        <div class="plan-price" style="font-size:36px;letter-spacing:-1px;"><sup style="font-size:18px;">$</sup>1,499</div>
-        <div class="plan-unit">per report</div>
-        <p class="plan-desc">Receive custom trend reports analyzing market dynamics and competitive drivers to optimize strategy.</p>
-        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Request a Report</a>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>Custom scope &amp; focus</li>
-          <li>Market dynamics analysis</li>
-          <li>Competitive driver mapping</li>
-          <li>Strategic recommendations</li>
-          <li>Executive-ready format</li>
-        </ul>
-      </div>
-
-      <!-- Free -->
-      <div class="pricing-card free-tier reveal d4">
-        <div class="free-label">Start for Free</div>
-        <div class="plan-name">Free Weekly Briefing</div>
-        <div class="plan-price"><sup>$</sup>0</div>
-        <div class="plan-unit">always free</div>
-        <p class="plan-desc">Stay informed with our free weekly briefing delivered straight to your inbox, focusing on general technology trends and innovative case studies.</p>
-        <a href="#cta-section" class="btn btn-outline plan-btn" style="width:100%;justify-content:center;">Subscribe Free</a>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>General technology trends</li>
-          <li>Innovative case studies</li>
-          <li>Weekly delivery</li>
-          <li>No credit card required</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ NEWSLETTER MOCKUP ═══ -->
-<section id="newsletter-mockup">
-  <div class="container">
-    <div class="mockup-grid">
-
-      <!-- Left: text -->
-      <div class="mockup-text reveal d1">
-        <span class="section-tag">Free Weekly Briefing</span>
-        <h2 class="mockup-title">Intelligence,<br>delivered to you.</h2>
-        <p class="mockup-desc">Get a tailored Monday morning brief directly in your inbox — market trends, competitive signals, and sector analysis distilled for busy leaders. No paywalls, no noise. Just what matters.</p>
-        <a href="#cta-section" class="btn btn-primary" style="margin-top:8px;">Subscribe Free</a>
-      </div>
-
-      <!-- Right: stacked mockup images -->
-      <div class="mockup-images reveal d2">
-        <!-- Back card: sample intelligence carousel card -->
-        <div class="mockup-card mockup-card-back">
-          <img src="visual-stellantis-microsoft.png" alt="Intelligence briefing — Stellantis × Microsoft" loading="lazy" />
+        <div class="sample-pick">
+          <label for="sample-topic">Choose a topic</label>
+          <select class="select" id="sample-topic" required><option value="" disabled selected>Select a sample</option></select>
+          <button type="button" class="btn btn-green" id="open-sample">Read the sample</button>
         </div>
-        <!-- Front card: actual newsletter briefing -->
-        <div class="mockup-card mockup-card-front">
-          <img src="The_Rewire_Edition_01_Briefing.png" alt="The Rewire — Edition 01 newsletter briefing" loading="lazy" />
-        </div>
-      </div>
+      </article>
 
-    </div>
-  </div>
-  <!-- Bottom divider -->
-  <div class="mockup-divider"></div>
-</section>
-
-<!-- ═══ CONTACT ═══ -->
-<section id="cta-section">
-  <div class="contact-glow"></div>
-  <div class="container">
-    <div class="contact-layout reveal">
-
-      <!-- Left: heading + contact info -->
-      <div class="contact-left">
-        <span class="section-tag">Contact</span>
-        <h2>Let us know how we can help</h2>
-        <p>We're here to help and answer any question you might have. Tell us about your intelligence needs and we'll get back to you promptly.</p>
-        <ul class="contact-methods">
-          <li class="contact-method">
-            <div class="contact-method-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            hello@thehomeofinsights.com
-          </li>
-          <li class="contact-method">
-            <div class="contact-method-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
-            </div>
-            Available via email &amp; LinkedIn
-          </li>
-          <li class="contact-method">
-            <div class="contact-method-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 018 8c0 5.25-8 13-8 13S4 15.25 4 10a8 8 0 018-8z"/></svg>
-            </div>
-            Remote — serving clients globally
-          </li>
+      <article class="pricing-card" data-card="catalogue">
+        <p class="plan-name">Catalogue brief</p>
+        <p class="plan-price"><sup>$</sup><span data-price-num="monthly">99</span><span class="period"> / month</span></p>
+        <p class="plan-unit">No setup fee</p>
+        <p class="plan-desc">Choose one of our five ready briefs and start receiving it right away.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>From M&amp;A and strategy to AI and workforce</li>
+          <li>One edition a month to any email or team list</li>
+          <li>What happened and why it matters, for every item</li>
+          <li>Direct link to every source</li>
+          <li>Cancel anytime</li>
         </ul>
-      </div>
+        <button type="button" class="btn btn-outline" data-plan="catalogue" aria-controls="panel-catalogue" aria-expanded="false">Choose a brief</button>
+      </article>
 
-      <!-- Right: form -->
-      <div class="contact-right">
-        <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="cf-name">Full name<span class="required" aria-hidden="true">*</span></label>
-              <input class="form-input" id="cf-name" type="text" placeholder="Jane Smith" required />
+      <article class="pricing-card featured" data-card="bespoke">
+        <p class="card-badge">Most popular</p>
+        <p class="plan-name">Bespoke brief</p>
+        <p class="plan-price"><sup>$</sup><span data-price-num="monthly">99</span><span class="period"> / month</span></p>
+        <p class="plan-unit">+ <span data-price="setupBespoke">$299</span> one-time setup</p>
+        <p class="plan-desc">Built from scratch on any topic you choose, with the sources curated for you.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>Any topic, market or set of competitors</li>
+          <li>Sources selected and curated for you</li>
+          <li>Structure and scope agreed before you pay</li>
+          <li>What happened and why it matters, for every item</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <button type="button" class="btn btn-primary" data-plan="bespoke" aria-controls="panel-request" aria-expanded="false">Request a bespoke brief</button>
+      </article>
+
+      <article class="pricing-card" data-card="branded">
+        <p class="plan-name">Company branded</p>
+        <p class="plan-price"><sup>$</sup><span data-price-num="monthly">99</span><span class="period"> / month</span></p>
+        <p class="plan-unit">+ <span data-price="setupBranded">$499</span> one-time setup</p>
+        <p class="plan-desc">Your company's own intelligence brief, in your branding, ready to distribute internally.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>Everything in Bespoke</li>
+          <li>Your company's name, logo and colours</li>
+          <li>Ready for company-wide distribution</li>
+          <li>Internal distribution rights included</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <button type="button" class="btn btn-outline" data-plan="branded" aria-controls="panel-request" aria-expanded="false">Request a branded brief</button>
+      </article>
+    </div>
+
+    <!-- Catalogue: pick, give distribution email, pay -->
+    <div class="panel" id="panel-catalogue" hidden>
+      <button type="button" class="panel-close" data-close-panel aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+      <form id="form-catalogue" novalidate>
+        <div class="panel-grid">
+          <div>
+            <h3>Your intelligence brief</h3>
+            <p class="panel-intro">Choose from the briefs currently available. You can read a free sample of each.</p>
+            <div class="field" style="margin-top: var(--space-3);">
+              <label for="cat-brief">Intelligence brief<span class="req" aria-hidden="true">*</span></label>
+              <select class="select" id="cat-brief" name="brief" required><option value="" disabled selected>Select a brief</option></select>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="cf-email">Work email<span class="required" aria-hidden="true">*</span></label>
-              <input class="form-input" id="cf-email" type="email" placeholder="jane@company.com" required />
-              <span class="field-error" id="email-error">Please enter a valid email address.</span>
+            <div class="preview" id="cat-preview" aria-live="polite"><p class="preview-empty">Select a brief to see what it covers.</p></div>
+          </div>
+          <div data-form-body>
+            <h3>Delivery and payment</h3>
+            <p class="panel-intro">We deliver each edition by email. You pay for the first month now, then monthly until you cancel.</p>
+            <div class="field-row" style="margin-top: var(--space-3);">
+              <div class="field">
+                <label for="cat-deliver">Deliver the brief to<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="email" id="cat-deliver" name="deliver_to" autocomplete="email" inputmode="email" placeholder="team@company.com" required />
+                <span class="hint">A personal address or a team distribution list.</span>
+              </div>
+              <div class="field">
+                <label for="cat-billing">Your email for receipts<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="email" id="cat-billing" name="billing_email" autocomplete="email" inputmode="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+            <div class="consents">
+              <label class="check"><input type="checkbox" name="accept_terms" required /><span>I accept the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+              <label class="check"><input type="checkbox" name="start_now" required /><span>Please start delivery before the 14-day withdrawal period ends. If I withdraw, I'll pay only for editions already delivered.</span></label>
+            </div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="submit-row">
+              <button type="submit" class="btn btn-primary btn-flash"><span>Order and pay <span data-price="monthly">$99</span>/month</span></button>
+              <p class="form-error" role="alert" data-error></p>
+              <p class="fineprint">Payment is processed securely by Stripe. Cancel anytime; your subscription runs until the end of the month you've paid for.</p>
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="cf-company">Company</label>
-              <input class="form-input" id="cf-company" type="text" placeholder="Acme Corp" />
+        </div>
+      </form>
+    </div>
+
+    <!-- Bespoke / Company branded: request form -->
+    <div class="panel" id="panel-request" hidden>
+      <button type="button" class="panel-close" data-close-panel aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+      <form id="form-request" novalidate>
+        <input type="hidden" name="plan" value="bespoke" />
+        <div class="panel-grid">
+          <div>
+            <h3 data-request-title>Your bespoke intelligence brief</h3>
+            <p class="panel-intro"><strong>Fill in the form.</strong>The more information you give us, the better the result will be.</p>
+            <ol class="next-steps">
+              <li><strong>You fill in the form</strong>It takes about five minutes.</li>
+              <li><strong>We propose a scope</strong>Within two business days you receive the proposed structure, themes and sources.</li>
+              <li><strong>You approve and pay</strong>Only then do you pay the setup fee and first month, through a secure payment link.</li>
+            </ol>
+            <p class="price-summary" data-request-price>$99 / month + $299 one-time setup</p>
+          </div>
+          <div data-form-body>
+            <div class="field-row">
+              <div class="field"><label for="rq-company">Company<span class="req" aria-hidden="true">*</span></label><input class="input" id="rq-company" name="company" autocomplete="organization" required /></div>
+              <div class="field"><label for="rq-name">Your name<span class="req" aria-hidden="true">*</span></label><input class="input" id="rq-name" name="name" autocomplete="name" required /></div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="cf-service">Service of interest</label>
-              <select class="form-input" id="cf-service" style="appearance:none;cursor:pointer;">
-                <option value="" disabled selected>Select a service…</option>
-                <option>Free Weekly Briefing</option>
-                <option>Market Intelligence Newsletter</option>
-                <option>Company Profile</option>
-                <option>Custom Industry Report</option>
-                <option>Other / Not sure yet</option>
+            <div class="field-row">
+              <div class="field"><label for="rq-email">Work email<span class="req" aria-hidden="true">*</span></label><input class="input" type="email" id="rq-email" name="email" autocomplete="email" inputmode="email" required /></div>
+              <div class="field"><label for="rq-phone">Phone <span class="optional">(optional)</span></label><input class="input" type="tel" id="rq-phone" name="phone" autocomplete="tel" inputmode="tel" /></div>
+            </div>
+            <div class="field"><label for="rq-scope">What should the brief cover?<span class="req" aria-hidden="true">*</span></label><textarea class="textarea" id="rq-scope" name="scope" required placeholder="Markets, competitors, regions or themes you want to follow"></textarea></div>
+            <div class="field"><label for="rq-readers">Who will read it?<span class="req" aria-hidden="true">*</span></label><input class="input" id="rq-readers" name="readers" required placeholder="For example: leadership team of 12, plus regional heads" /></div>
+            <div class="field"><label for="rq-purpose">What should readers get out of it?<span class="req" aria-hidden="true">*</span></label><textarea class="textarea" id="rq-purpose" name="purpose" required placeholder="The decisions it should support, or what readers should know after reading"></textarea></div>
+            <div class="field"><label for="rq-sources">A few sources you already follow <span class="optional">(optional)</span></label><textarea class="textarea" id="rq-sources" name="sources" placeholder="Websites, publications or organisations. We'll find many more."></textarea></div>
+
+            <fieldset class="fieldset" data-branded-only hidden>
+              <legend>Your brand<span class="req" aria-hidden="true">*</span></legend>
+              <p class="hint">Share a link to your brand guidelines, or attach your logo, colour palette and fonts. One of the two is enough.</p>
+              <div class="field">
+                <label for="rq-brand-link">Link to brand guidelines or files</label>
+                <input class="input" type="url" id="rq-brand-link" name="brand_link" placeholder="https://" disabled />
+              </div>
+              <p class="or">or</p>
+              <label class="drop" id="drop">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4"/><polyline points="7 9 12 4 17 9"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+                <div><strong>Attach brand files</strong><span>Logo, colour palette, fonts. PNG, JPG, SVG, PDF or ZIP, up to 10 MB in total.</span></div>
+                <input type="file" id="rq-brand-files" name="brand_files" multiple accept=".png,.jpg,.jpeg,.svg,.pdf,.zip,.ai,.eps" disabled />
+              </label>
+              <ul class="file-list" id="file-list"></ul>
+            </fieldset>
+
+            <div class="consents">
+              <label class="check"><input type="checkbox" name="accept_privacy" required /><span>I have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and agree that you use these details to reply to my request.</span></label>
+            </div>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="submit-row">
+              <button type="submit" class="btn btn-primary btn-flash">Request my intelligence brief</button>
+              <p class="form-error" role="alert" data-error></p>
+              <p class="fineprint">No payment now.</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHO'S BEHIND IT ═══ -->
+<section class="section band" id="about" aria-labelledby="about-title">
+  <div class="container founder">
+    <div class="founder-photo"><img src="assets/founder.webp" alt="Mariusz Wnuk, founder of The Home of Insights" width="600" height="600" loading="lazy" /></div>
+    <div class="founder-text">
+      <div class="section-head"><h2 id="about-title">Who's behind the intelligence briefs</h2></div>
+      <p class="founder-quote">For the past ten years I've been delivering decision-ready insights to global corporations, turning scattered information into intelligence that shapes strategy. The Home of Insights brings the same discipline to your inbox.</p>
+      <div class="founder-by">
+        <p><strong>Mariusz Wnuk</strong> <span>Founder, The Home of Insights</span></p>
+        <a class="text-link li-link" href="https://www.linkedin.com/in/mariusz-wnuk/" target="_blank" rel="noopener" data-linkedin>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container faq-grid">
+    <div class="section-head"><h2 id="faq-title">Questions</h2><p class="lead">Can't find your answer? <a class="text-link" href="#contact">Send us a message</a>.</p></div>
+    <div class="faq-list">
+      <details><summary>What exactly will I receive?</summary><div class="answer"><p>One edition of Insight Out a month, by email. It's a curated set of news items on emerging trends, competitors' moves, new operating models and technology and AI. Every item tells you what happened, why it matters for the industry, and links directly to its source.</p></div></details>
+      <details><summary>Which briefs can I choose from?</summary><div class="answer"><p>Five ready briefs, each with a free sample:</p><ul class="faq-ul"><li><strong>CEE Expansion &amp; M&amp;A Tracker</strong>: deals, foreign investment and ownership changes in Central and Eastern Europe.</li><li><strong>Corporate Strategy &amp; Pivot Signal Tracker</strong>: new strategies, market exits, divestments and business model shifts.</li><li><strong>Enterprise AI, Tech &amp; Partnerships Monitor</strong>: tech and AI partnerships, deployments with measurable results, corporate venturing.</li><li><strong>Workforce Restructuring &amp; Efficiency Monitor</strong>: layoffs, delayering, AI-driven reorganisations and site consolidation.</li><li><strong>The Future of Workforce &amp; Skills Intelligence</strong>: reskilling, entry-level hiring and new ways of managing talent.</li></ul><p>Need a different topic? That is what the Bespoke brief is for.</p></div></details>
+      <details><summary>What sources do you use?</summary><div class="answer"><p>Only reliable, carefully selected, publicly available sources: company announcements and reports, earnings calls, publicly released analyst commentary, regulators and public bodies, reputable news outlets and industry associations.</p><p>We don't use paid or premium intelligence databases. What you're paying for is the selection, verification and insight. Every item links to its original source so you can check it yourself.</p></div></details>
+      <details><summary>What's the difference between Catalogue and Bespoke?</summary><div class="answer"><p>A Catalogue brief covers a topic we already follow, and you can start right away. A Bespoke brief is designed around your own topic, competitors and questions, and we agree the scope with you before you pay.</p></div></details>
+      <details><summary>Can I share it with my team?</summary><div class="answer"><p>Yes, within your organisation. Many clients send it to a team distribution list. Please don't republish it or share it outside your organisation. Company branded briefs are made for company-wide distribution under your own branding.</p></div></details>
+      <details><summary>How do I cancel?</summary><div class="answer"><p>Anytime, from the link in your payment receipt or by emailing us. Your subscription stays active until the end of the month you've already paid for, and you won't be charged again.</p></div></details>
+      <details><summary>Is this investment advice?</summary><div class="answer"><p>No. The brief gives you context on industry developments to inform your own strategic or investment thinking. Decisions remain yours.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT (as on the live site) ═══ -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-glow"></div>
+  <div class="container contact-layout">
+    <div class="contact-left">
+      <h2 id="contact-title">Let us know how we can help</h2>
+      <p>We're here to help and answer any questions you might have. Tell us about your intelligence needs and we'll do our best to meet your expectations.</p>
+      <a class="contact-method" href="mailto:mariusz@thehomeofinsights.com" data-contact-email>
+        <span class="contact-method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <span data-contact-text>mariusz@thehomeofinsights.com</span>
+      </a>
+    </div>
+    <div class="contact-right">
+      <form class="contact-form" id="form-contact" novalidate>
+        <div data-form-body>
+          <div class="field-row">
+            <div class="field"><label for="cf-name">Full name<span class="req" aria-hidden="true">*</span></label><input class="input" id="cf-name" name="name" autocomplete="name" placeholder="Jane Smith" required /></div>
+            <div class="field"><label for="cf-email">Work email<span class="req" aria-hidden="true">*</span></label><input class="input" type="email" id="cf-email" name="email" autocomplete="email" inputmode="email" placeholder="jane@company.com" required /></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="cf-company">Company</label><input class="input" id="cf-company" name="company" autocomplete="organization" placeholder="Acme Corp" /></div>
+            <div class="field">
+              <label for="cf-interest">I'm interested in</label>
+              <select class="select" id="cf-interest" name="interest">
+                <option value="" selected>Select an option</option>
+                <option>Catalogue brief</option>
+                <option>Bespoke brief</option>
+                <option>Company branded brief</option>
+                <option>Other / not sure yet</option>
               </select>
             </div>
           </div>
-          <div class="form-group" style="margin-bottom:0;">
-            <label class="form-label" for="cf-message">Tell us more about your needs<span class="required" aria-hidden="true">*</span></label>
-            <textarea class="form-textarea" id="cf-message" placeholder="Describe what you're trying to learn, the market or competitors you're tracking, and any timeline or budget considerations…" required></textarea>
+          <div class="field">
+            <label for="cf-message">Tell us about your intelligence needs<span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea" id="cf-message" name="message" required placeholder="What would you like to follow? Markets, competitors or themes, who would read it, and what decisions it should support."></textarea>
           </div>
-          <button type="submit" class="form-submit" id="form-submit-btn">Send Message</button>
-          <p class="form-note">No primary research costs · Publicly sourced · Professionally synthesized</p>
-        </form>
-      </div>
-
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary btn-flash">Send message</button>
+            <p class="form-error" role="alert" data-error></p>
+            <p class="fineprint">We use your details only to reply to you. See our <a href="privacy.html">Privacy Policy</a>.</p>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ═══ BRIEFING LIGHTBOX ═══ -->
-<div id="briefing-lightbox" role="dialog" aria-modal="true" aria-label="Newsletter example" style="
-  display:none;
-  position:fixed;inset:0;
-  z-index:9999;
-  background:rgba(7,0,26,0.92);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-">
-  <button onclick="closeBriefingLightbox()" aria-label="Close" style="
-    position:absolute;top:20px;right:20px;
-    width:44px;height:44px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,0.2);
-    background:rgba(255,255,255,0.07);
-    color:#fff;font-size:22px;line-height:1;
-    cursor:pointer;display:flex;align-items:center;justify-content:center;
-    transition:background 0.2s;
-  " onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">✕</button>
-  <img src="The_Rewire_Edition_01_Briefing.png" alt="The Rewire — Edition 01 Newsletter"
-    style="max-width:100%;max-height:90vh;border-radius:16px;box-shadow:0 40px 120px rgba(0,0,0,0.8);object-fit:contain;" />
-</div>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
+<footer class="site-footer">
   <div class="container">
     <div class="footer-top">
-      <div class="footer-brand">
-        <img src="new%20logo%20(3).png" alt="The Home of Insights" />
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#pricing">Market Intelligence Newsletter</a></li>
-          <li><a href="#pricing">Company Profiles</a></li>
-          <li><a href="#pricing">Custom Industry Reports</a></li>
-          <li><a href="#pricing">Free Weekly Briefing</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#methodology">About</a></li>
-          <li><a href="#methodology">Methodology</a></li>
-          <li><a href="#cta-section">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#cta-section" title="Coming soon">FAQ</a></li>
-          <li><a href="#cta-section" title="Coming soon">Privacy Policy</a></li>
-          <li><a href="#cta-section" title="Coming soon">Terms of Service</a></li>
-        </ul>
-      </div>
+      <a href="#top" class="footer-logo" aria-label="The Home of Insights, back to top"><img src="assets/logo.png" alt="The Home of Insights" width="95" height="72" /></a>
+      <ul class="footer-links">
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 The Home of Insights. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#cta-section" title="Coming soon">Privacy</a>
-        <a href="#cta-section" title="Coming soon">Terms</a>
-      </div>
-    </div>
+    <!-- Seller identification lives in terms.html (section 1), linked here as required -->
+    <p class="footer-legal">© 2026 The Home of Insights. All rights reserved. Seller details are in the <a href="terms.html">Terms of Service</a>.</p>
   </div>
 </footer>
 
+<!-- Mobile: pricing always one tap away -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <p>From <span data-price="monthly">$99</span><span class="muted"> / month</span></p>
+  <a href="#pricing" class="btn btn-primary" tabindex="-1">See pricing</a>
+</div>
+
+<!-- ═══ SAMPLE DIALOG ═══ -->
+<dialog class="sample-dialog" id="sample-dialog" aria-labelledby="sample-dialog-title">
+  <div class="dialog-bar">
+    <p id="sample-dialog-title">Free sample</p>
+    <div class="dialog-actions">
+    <a class="dialog-open" id="sample-open" href="#" target="_blank" rel="noopener">Open full page<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <button type="button" class="dialog-close" id="sample-close" aria-label="Close sample"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    </div>
+  </div>
+  <iframe id="sample-frame" title="Sample intelligence brief"></iframe>
+</dialog>
+
 <script>
-  // Nav scroll
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+  /* ═══════════════════════════════════════════════════════════
+     CONFIG: the only place you need to edit for the brief name,
+     prices, links and the catalogue.
+  ═══════════════════════════════════════════════════════════ */
+  const CONFIG = {
+    briefName: 'Insight Out',
+    prices: { monthly: 99, setupBespoke: 299, setupBranded: 499, currency: 'USD' },
+    // Formspree form endpoint (create a free form at formspree.io). While it contains
+    // PLACEHOLDER, messages fall back to opening the visitor's email app.
+    // Note: attaching brand files through the form needs a Formspree plan with file uploads.
+    formEndpoint: 'https://formspree.io/f/PLACEHOLDER',
+    contactEmail: 'mariusz@thehomeofinsights.com',
+    maxUploadMB: 10,
+  };
 
-  // Reveal on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // The five Insight Out briefs. Each one is both a free sample and a catalogue brief.
+  // `sample`: the file with its free sample edition (a copy of the brief's September 2026 edition from ~/.claude/Insight Out).
+  // `stripeLink`: Stripe Payment Link for the subscription.
+  const BRIEFS = [
+    { id: 'cee-ma', name: 'CEE Expansion & M&A Tracker',
+      desc: 'Early signals of deals, foreign investment and ownership changes across Central and Eastern Europe, with a focus on Poland.',
+      audience: 'Law firm partners, PE and VC funds, M&A advisers and corporate development teams',
+      cadence: 'Monthly, first week of the month', sample: 'samples/cee-ma.html?v=2026-09', stripeLink: '' },
+    { id: 'strategy', name: 'Corporate Strategy & Pivot Signal Tracker',
+      desc: 'Fundamental shifts in the direction of leading global and regional companies: new strategies, market exits, divestments and business model changes.',
+      audience: 'CEOs, board members, chief strategy officers and competitive intelligence teams',
+      cadence: 'Monthly, first week of the month', sample: 'samples/strategy.html?v=2026-09', stripeLink: '' },
+    { id: 'enterprise-ai', name: 'Enterprise AI, Tech & Partnerships Monitor',
+      desc: 'Partnerships between established companies and tech or AI firms, AI deployments with measurable results, corporate venture investments and start-up acquisitions.',
+      audience: 'CTOs, CIOs, chief digital officers, heads of innovation, business development and corporate venture teams',
+      cadence: 'Monthly, first week of the month', sample: 'samples/enterprise-ai.html?v=2026-09', stripeLink: '' },
+    { id: 'restructuring', name: 'Workforce Restructuring & Efficiency Monitor',
+      desc: 'Cost optimisation and organisational benchmarking: layoffs and hiring freezes, delayering, AI-driven reorganisations and site consolidation.',
+      audience: 'COOs, CHROs, heads of GBS, SSC and BPO, and interim managers',
+      cadence: 'Monthly, first week of the month', sample: 'samples/restructuring.html?v=2026-09', stripeLink: '' },
+    { id: 'future-skills', name: 'The Future of Workforce & Skills Intelligence',
+      desc: 'How leading companies adapt people, skills and culture to AI: reskilling, entry-level hiring, outcome-based performance and internal talent marketplaces.',
+      audience: 'CHROs, heads of learning and development, transformation leaders and talent acquisition teams',
+      cadence: 'Monthly, first week of the month', sample: 'samples/future-skills.html?v=2026-09', stripeLink: '' },
+  ];
 
-  // Hero reveals immediately
-  setTimeout(() => {
-    document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
-  }, 100);
+  /* ─── Helpers ─── */
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const money = n => '$' + n.toLocaleString('en-US');
+  const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const behavior = reducedMotion ? 'auto' : 'smooth';
+  const scrollToEl = (el, offset = 104) => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior });
 
-  // Hero full-bleed toggle
-  const heroSection = document.getElementById('hero');
-  const toggleBtn = document.getElementById('hero-toggle-btn');
-  const iconMin = document.getElementById('icon-minimize');
-  const iconMax = document.getElementById('icon-maximize');
-  let isFullBleed = true;
-  toggleBtn.addEventListener('click', () => {
-    isFullBleed = !isFullBleed;
-    heroSection.classList.toggle('fit-content', !isFullBleed);
-    iconMin.style.display = isFullBleed ? '' : 'none';
-    iconMax.style.display = isFullBleed ? 'none' : '';
-    toggleBtn.setAttribute('aria-label', isFullBleed ? 'Switch to fit-to-content' : 'Switch to full-bleed');
+  /* ─── Apply config to the page ─── */
+  $$('[data-brief-name]').forEach(el => { el.textContent = CONFIG.briefName; });
+  $$('[data-price]').forEach(el => { el.textContent = money(CONFIG.prices[el.dataset.price]); });
+  $$('[data-price-num]').forEach(el => { el.textContent = CONFIG.prices[el.dataset.priceNum].toLocaleString('en-US'); });
+  $$('[data-contact-email]').forEach(el => { el.href = 'mailto:' + CONFIG.contactEmail; if (!el.children.length && el.textContent.includes('@')) el.textContent = CONFIG.contactEmail; });
+  $$('[data-contact-text]').forEach(el => { el.textContent = CONFIG.contactEmail; });
+
+  /* ─── Nav ─── */
+  const nav = $('#nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const navToggle = $('#nav-toggle');
+  const mobileMenu = $('#mobile-menu');
+  const setMenu = open => { mobileMenu.classList.toggle('open', open); navToggle.setAttribute('aria-expanded', String(open)); };
+  navToggle.addEventListener('click', () => setMenu(navToggle.getAttribute('aria-expanded') !== 'true'));
+  $$('a', mobileMenu).forEach(el => el.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', e => { if (!navToggle.contains(e.target) && !mobileMenu.contains(e.target)) setMenu(false); });
+
+  /* ─── Hero: video + full-bleed toggle (as on the live site) ─── */
+  const video = $('#hero-video');
+  if (reducedMotion) { video.removeAttribute('autoplay'); video.pause(); }
+  const hero = $('#top');
+  const heroToggle = $('#hero-toggle');
+  heroToggle.addEventListener('click', () => {
+    const fit = hero.classList.toggle('fit-content');
+    $('#icon-minimize').hidden = fit;
+    $('#icon-maximize').hidden = !fit;
+    heroToggle.setAttribute('aria-label', fit ? 'Switch to full-bleed' : 'Switch to fit-to-content');
   });
 
-  // Logo background removal — strips dark pixels from Logo.png so it blends
-  function removeLogoBg(img) {
-    const run = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-      const d = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const px = d.data;
-      for (let i = 0; i < px.length; i += 4) {
-        // Perceived brightness (weighted)
-        const lum = px[i] * 0.299 + px[i+1] * 0.587 + px[i+2] * 0.114;
-        if (lum < 38) {
-          px[i+3] = 0;                           // fully transparent
-        } else if (lum < 90) {
-          px[i+3] = Math.round((lum - 38) / 52 * 255); // soft edge
-        }
-      }
-      ctx.putImageData(d, 0, 0);
-      img.src = canvas.toDataURL('image/png');
-    };
-    if (img.complete && img.naturalWidth) { run(); }
-    else { img.addEventListener('load', run, { once: true }); }
+  /* ─── Signals → brief: the noise fades, signals light up, the brief fills in ─── */
+  const flow = $('#flow');
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    flow.classList.add('filtered');
+  } else {
+    const io = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) { setTimeout(() => flow.classList.add('filtered'), 600); io.disconnect(); }
+    }, { threshold: 0.4 });
+    io.observe(flow);
   }
-  document.querySelectorAll('.nav-logo img, .footer-brand img').forEach(removeLogoBg);
 
-  // Mobile nav hamburger
-  (function () {
-    const hamburger  = document.getElementById('nav-hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (!hamburger || !mobileMenu) return;
-    function closeMenu() {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-    }
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-    document.addEventListener('click', e => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
-    });
-  })();
+  /* ─── Mobile sticky CTA: shown after the hero, hidden from pricing onwards ─── */
+  const sticky = $('#sticky-cta');
+  const pricingSection = $('#pricing');
+  const updateSticky = () => {
+    const show = hero.getBoundingClientRect().bottom < 80 && pricingSection.getBoundingClientRect().top > window.innerHeight;
+    sticky.classList.toggle('show', show);
+    sticky.setAttribute('aria-hidden', String(!show));
+    $('a', sticky).tabIndex = show ? 0 : -1;
+  };
+  window.addEventListener('scroll', updateSticky, { passive: true });
+  window.addEventListener('resize', updateSticky);
+  updateSticky();
 
-  // Products gallery carousel
-  (function () {
-    const track   = document.getElementById('gallery-track');
-    if (!track) return;
-    const items   = track.querySelectorAll('.gallery-item');
-    const prevBtn = document.getElementById('gallery-prev');
-    const nextBtn = document.getElementById('gallery-next');
-    const dots    = document.querySelectorAll('.gallery-dot');
-    let current   = 0;
+  /* ─── Samples ─── */
+  const dialog = $('#sample-dialog');
+  const frame = $('#sample-frame');
+  function openSample(src, title) {
+    $('#sample-dialog-title').textContent = title;
+    $('#sample-open').href = src;
+    if (frame.getAttribute('src') !== src) frame.src = src;
+    dialog.showModal();
+  }
+  $('#sample-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
 
-    function itemWidth() {
-      return items[0].getBoundingClientRect().width + 20;
-    }
-    function update() {
-      track.style.transform = `translateX(-${current * itemWidth()}px)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
-      if (prevBtn) prevBtn.disabled = current === 0;
-      if (nextBtn) nextBtn.disabled = current >= items.length - 1;
-    }
-    if (prevBtn) prevBtn.addEventListener('click', () => { if (current > 0) { current--; update(); } });
-    if (nextBtn) nextBtn.addEventListener('click', () => { if (current < items.length - 1) { current++; update(); } });
-    dots.forEach((dot, i) => dot.addEventListener('click', () => { current = i; update(); }));
-    window.addEventListener('resize', update);
-
-    // Touch swipe support
-    let touchStartX = 0;
-    const trackWrap = document.querySelector('.gallery-track-wrap');
-    if (trackWrap) {
-      trackWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-      trackWrap.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(dx) > 48) {
-          if (dx < 0 && current < items.length - 1) { current++; update(); }
-          else if (dx > 0 && current > 0) { current--; update(); }
-        }
-      }, { passive: true });
-    }
-
-    update();
-  })();
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
+  const sampleSelect = $('#sample-topic');
+  BRIEFS.forEach(b => sampleSelect.add(new Option(b.name, b.id)));
+  sampleSelect.addEventListener('change', () => sampleSelect.classList.remove('is-invalid'));
+  $('#open-sample').addEventListener('click', () => {
+    const b = BRIEFS.find(x => x.id === sampleSelect.value);
+    if (!b) { sampleSelect.classList.add('is-invalid'); sampleSelect.focus(); return; }
+    openSample(b.sample, 'Free sample: ' + b.name);
   });
 
-// Contact form: validation + disable on submit
-  function handleContactSubmit(e) {
-    e.preventDefault();
-    const emailInput = document.getElementById('cf-email');
-    const emailError = document.getElementById('email-error');
-    const submitBtn  = document.getElementById('form-submit-btn');
-    let valid = true;
-
-    // Email validation
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRe.test(emailInput.value.trim())) {
-      emailInput.classList.add('error');
-      emailInput.classList.remove('valid');
-      if (emailError) { emailError.classList.add('visible'); }
-      valid = false;
+  /* ─── Pricing cards open the matching order / request panel ─── */
+  const planButtons = $$('[data-plan]');
+  const panelCatalogue = $('#panel-catalogue');
+  const panelRequest = $('#panel-request');
+  const PLAN_COPY = {
+    bespoke: { title: 'Your bespoke intelligence brief', setup: 'setupBespoke' },
+    branded: { title: 'Your company branded intelligence brief', setup: 'setupBranded' },
+  };
+  function openPlan(plan) {
+    planButtons.forEach(b => b.setAttribute('aria-expanded', String(b.dataset.plan === plan)));
+    $$('.pricing-card').forEach(c => c.classList.toggle('is-selected', c.dataset.card === plan));
+    let panel;
+    if (plan === 'catalogue') {
+      panelRequest.hidden = true;
+      panel = panelCatalogue;
     } else {
-      emailInput.classList.remove('error');
-      emailInput.classList.add('valid');
-      if (emailError) { emailError.classList.remove('visible'); }
+      panelCatalogue.hidden = true;
+      const copy = PLAN_COPY[plan];
+      $('#form-request').elements.plan.value = plan;
+      $('[data-request-title]').textContent = copy.title;
+      $('[data-request-price]').textContent = `${money(CONFIG.prices.monthly)} / month + ${money(CONFIG.prices[copy.setup])} one-time setup`;
+      const branded = plan === 'branded';
+      $('[data-branded-only]').hidden = !branded;
+      $('#rq-brand-link').disabled = !branded;   // hidden fields must not block validation
+      $('#rq-brand-files').disabled = !branded;
+      panel = panelRequest;
     }
-
-    if (!valid) return;
-
-    // Disable button and show confirmation
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
-    submitBtn.style.cursor = 'not-allowed';
-    submitBtn.textContent = 'Request Sent ✓';
-    submitBtn.style.animation = 'none';
+    if (panel.hidden) { panel.hidden = false; panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = ''; }
+    scrollToEl(panel);
+    const first = $('select, input:not([type=hidden]):not(.hp)', panel);
+    setTimeout(() => first && first.focus({ preventScroll: true }), reducedMotion ? 0 : 450);
   }
+  function closePanels() {
+    panelCatalogue.hidden = true; panelRequest.hidden = true;
+    planButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+    $$('.pricing-card').forEach(c => c.classList.remove('is-selected'));
+    scrollToEl($('#pricing-title'), 120);
+  }
+  planButtons.forEach(b => b.addEventListener('click', () => openPlan(b.dataset.plan)));
+  $$('[data-close-panel]').forEach(b => b.addEventListener('click', closePanels));
 
-  // Briefing lightbox
-  function openBriefingLightbox(e) {
-    e && e.preventDefault();
-    const lb = document.getElementById('briefing-lightbox');
-    lb.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-  function closeBriefingLightbox() {
-    document.getElementById('briefing-lightbox').style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  document.getElementById('briefing-lightbox').addEventListener('click', function(e) {
-    if (e.target === this) closeBriefingLightbox();
+  /* ─── Catalogue list ─── */
+  const briefSelect = $('#cat-brief');
+  const preview = $('#cat-preview');
+  BRIEFS.forEach(b => briefSelect.add(new Option(b.name, b.id)));
+  briefSelect.addEventListener('change', () => {
+    const b = BRIEFS.find(x => x.id === briefSelect.value);
+    if (!b) return;
+    preview.innerHTML = `
+      <p class="preview-name">${escapeHtml(b.name)}</p>
+      <p class="preview-desc">${escapeHtml(b.desc)}</p>
+      <p class="preview-for"><strong>Written for</strong> ${escapeHtml(b.audience)}</p>
+      <p class="preview-meta">${escapeHtml(b.cadence)}</p>
+      <button type="button" class="btn btn-outline" data-preview-sample>Read the free sample</button>`;
+    $('[data-preview-sample]', preview).addEventListener('click', () => openSample(b.sample, 'Free sample: ' + b.name));
   });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeBriefingLightbox();
+
+  /* ─── Brand files (company branded) ─── */
+  const fileInput = $('#rq-brand-files');
+  const fileList = $('#file-list');
+  const drop = $('#drop');
+  const brandSet = $('[data-branded-only]');
+  fileInput.addEventListener('change', () => {
+    fileList.innerHTML = [...fileInput.files].map(f => `<li>${escapeHtml(f.name)}</li>`).join('');
+    brandSet.classList.remove('is-invalid');
+  });
+  $('#rq-brand-link').addEventListener('input', () => brandSet.classList.remove('is-invalid'));
+  ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, () => drop.classList.add('dragging')));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, () => drop.classList.remove('dragging')));
+
+  /* ─── Submissions ─── */
+  const endpointReady = () => CONFIG.formEndpoint && !CONFIG.formEndpoint.includes('PLACEHOLDER');
+  async function send(payload, files = []) {
+    if (!endpointReady()) {
+      const body = Object.entries(payload).filter(([k]) => !k.startsWith('_')).map(([k, v]) => `${k}: ${v}`).join('\n');
+      window.location.href = `mailto:${CONFIG.contactEmail}?subject=${encodeURIComponent(payload._subject)}&body=${encodeURIComponent(body)}`;
+      return 'mailto';
+    }
+    let init;
+    if (files.length) {
+      const fd = new FormData();
+      Object.entries(payload).forEach(([k, v]) => fd.append(k, v));
+      files.forEach(f => fd.append('brand_files', f, f.name));
+      init = { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd };
+    } else {
+      init = { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) };
+    }
+    const res = await fetch(CONFIG.formEndpoint, init);
+    if (!res.ok) throw new Error('Request failed with status ' + res.status);
+    return 'sent';
+  }
+  function fail(form, message, focusEl) {
+    $('[data-error]', form).textContent = message;
+    if (focusEl) focusEl.focus();
+    return false;
+  }
+  function validate(form, extra) {
+    form.classList.add('was-validated');
+    const firstInvalid = $$('input, select, textarea', form).find(el => !el.checkValidity());
+    if (firstInvalid) return fail(form, firstInvalid.type === 'checkbox' ? 'Please tick the required boxes to continue.' : 'Please complete the highlighted fields.', firstInvalid);
+    if (extra) { const msg = extra(); if (msg) return false; }
+    $('[data-error]', form).textContent = '';
+    return true;
+  }
+  function showSuccess(form, title, message) {
+    const body = $('[data-form-body]', form);
+    body.innerHTML = `
+      <div class="success" tabindex="-1">
+        <div class="success-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg></div>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(message)}</p>
+      </div>`;
+    const s = $('.success', body);
+    s.focus({ preventScroll: true });
+    s.scrollIntoView({ behavior, block: 'center' });
+  }
+  async function submitWith(form, buildPayload, onDone, noun, files = []) {
+    const btn = $('button[type="submit"]', form);
+    btn.setAttribute('aria-busy', 'true'); btn.disabled = true;
+    try {
+      const how = await send(buildPayload(), files);
+      onDone(how);
+    } catch (err) {
+      fail(form, `We couldn't send your ${noun}. Check your connection and try again, or email ${CONFIG.contactEmail}.`);
+      btn.removeAttribute('aria-busy'); btn.disabled = false;
+    }
+  }
+  const orderId = () => 'THOI-' + Date.now().toString(36).toUpperCase();
+
+  $('#form-catalogue').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.currentTarget, f = form.elements;
+    if (f._gotcha.value || !validate(form)) return;
+    const b = BRIEFS.find(x => x.id === f.brief.value);
+    const id = orderId();
+    submitWith(form, () => ({
+      _subject: `New order ${id}: ${b.name}`,
+      type: 'Catalogue brief order', order_id: id, brief: b.name,
+      deliver_to: f.deliver_to.value, billing_email: f.billing_email.value,
+      price: `${money(CONFIG.prices.monthly)}/month`, accepted_terms: 'yes', consent_start_before_withdrawal_period: 'yes',
+    }), how => {
+      if (b.stripeLink && how === 'sent') {
+        const url = new URL(b.stripeLink);
+        url.searchParams.set('client_reference_id', id);
+        url.searchParams.set('prefilled_email', f.billing_email.value);
+        window.location.href = url.toString();
+        return;
+      }
+      showSuccess(form, 'Order received', how === 'mailto'
+        ? `Your email app should open with your order (${id}). Send it and we'll reply with a secure payment link within 24 hours.`
+        : `Thank you. Your order reference is ${id}. We'll email a secure payment link to ${f.billing_email.value} within 24 hours.`);
+    }, 'order');
   });
 
-  // Live email validation feedback
-  (function () {
-    const emailInput = document.getElementById('cf-email');
-    const emailError = document.getElementById('email-error');
-    if (!emailInput) return;
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    emailInput.addEventListener('blur', () => {
-      if (emailInput.value && !emailRe.test(emailInput.value.trim())) {
-        emailInput.classList.add('error');
-        emailInput.classList.remove('valid');
-        if (emailError) emailError.classList.add('visible');
-      } else if (emailInput.value) {
-        emailInput.classList.remove('error');
-        emailInput.classList.add('valid');
-        if (emailError) emailError.classList.remove('visible');
-      }
+  $('#form-request').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.currentTarget, f = form.elements, plan = f.plan.value, branded = plan === 'branded';
+    if (f._gotcha.value) return;
+    const files = branded ? [...fileInput.files] : [];
+    const ok = validate(form, () => {
+      if (!branded) return '';
+      if (!f.brand_link.value && !files.length) { brandSet.classList.add('is-invalid'); fail(form, 'Please add a link to your brand files or attach them.', $('#rq-brand-link')); return 'x'; }
+      const mb = files.reduce((s, x) => s + x.size, 0) / 1048576;
+      if (mb > CONFIG.maxUploadMB) { brandSet.classList.add('is-invalid'); fail(form, `The attached files are ${mb.toFixed(1)} MB. Please keep them under ${CONFIG.maxUploadMB} MB, or share a link instead.`, fileInput); return 'x'; }
+      return '';
     });
-    emailInput.addEventListener('input', () => {
-      if (emailInput.classList.contains('error') && emailRe.test(emailInput.value.trim())) {
-        emailInput.classList.remove('error');
-        emailInput.classList.add('valid');
-        if (emailError) emailError.classList.remove('visible');
-      }
-    });
-  })();
+    if (!ok) return;
+    submitWith(form, () => ({
+      _subject: `New ${branded ? 'company branded' : 'bespoke'} brief request: ${f.company.value}`,
+      type: branded ? 'Company branded brief request' : 'Bespoke brief request',
+      company: f.company.value, name: f.name.value, email: f.email.value, phone: f.phone.value || '(none)',
+      scope: f.scope.value, readers: f.readers.value, purpose: f.purpose.value, sources: f.sources.value || '(none)',
+      ...(branded ? { brand_link: f.brand_link.value || '(none)', brand_files: files.map(x => x.name).join(', ') || '(none)' } : {}),
+      _replyto: f.email.value,
+    }), how => showSuccess(form, 'Request received', how === 'mailto'
+      ? (files.length
+          ? "Your email app should open with your request. Please attach your brand files to that email before sending it."
+          : "Your email app should open with your request. Send it and we'll reply within two business days with a proposed scope.")
+      : `Thank you, ${f.name.value}. We'll reply to ${f.email.value} within two business days with a proposed scope and a secure payment link.`), 'request', endpointReady() ? files : []);
+  });
+
+  $('#form-contact').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.currentTarget, f = form.elements;
+    if (f._gotcha.value || !validate(form)) return;
+    submitWith(form, () => ({
+      _subject: `New message from ${f.name.value}${f.interest.value ? ' (' + f.interest.value + ')' : ''}`,
+      type: 'Contact message', name: f.name.value, email: f.email.value, company: f.company.value || '(none)',
+      interest: f.interest.value || '(not specified)', message: f.message.value, _replyto: f.email.value,
+    }), how => showSuccess(form, 'Message sent', how === 'mailto'
+      ? "Your email app should open with your message. Send it and we'll get back to you within one business day."
+      : `Thank you, ${f.name.value}. We'll get back to you at ${f.email.value} within one business day.`), 'message');
+  });
+
+  $$('form').forEach(form => form.addEventListener('input', () => {
+    if (form.classList.contains('was-validated') && form.checkValidity()) $('[data-error]', form).textContent = '';
+  }));
 </script>
-
 </body>
 </html>
